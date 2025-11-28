@@ -1,0 +1,210 @@
+import { Meta, IconGallery, IconItem } from '@storybook/addon-docs/blocks';
+import {DynamicIcon} from "lucide-react/dynamic";
+import { Camera } from "lucide-react";
+
+<Meta title="Foundations/Icons" />
+
+# Icons
+
+This design system uses the Lucide icon set via lucide-react for consistent SVG icons across the application.
+Icons are React components that are tree‑shaken, configurable by props, and render inline SVGs.
+
+## Guidelines
+
+### When to use
+
+Use icons to clarify actions, status, and object types. Prefer pairing icons with text labels in navigation and buttons to improve recognition and accessibility of meaning.
+
+### Sizing and color
+
+Lucide defaults are `size = 24`, `color = currentColor`, and `strokeWidth = 2`, which map well to common UI scales and typographic systems.
+Using the CSS/SVG keyword currentColor ensures the icon inherits the parent text color, keeping icons consistent with themed foregrounds across light and dark modes.
+
+### Accessibility
+
+Decorative icons should be hidden from assistive tech with aria-hidden="true" so they don’t pollute accessible names or cause redundancy for screen readers.
+Icons that convey meaning or act as controls need an accessible name via aria-label or visible text; avoid relying on color alone to communicate state or status.
+
+## Usage
+
+### Import and basics
+
+Import icons directly as components, use props like `size`, `color`, and `strokeWidth`.
+
+> Tip: Centralize defaults with a small wrapper that inherits text color and uses `aria-hidden` for decorative usage.
+
+### Dynamic import
+
+> Tip: Only use the DynamicIcon variant when icon names come from runtime data such as a CMS or configuration.
+
+```js
+    import {DynamicIcon} from "lucide-react/dynamic";
+```
+
+```jsx
+    <DynamicIcon name="chevron-left" />
+```
+
+### Static import
+
+> Tip: Only use the DynamicIcon variant when icon names come from runtime data such as a CMS or configuration.
+
+```js
+    import { Camera } from "lucide-react";
+```
+
+```jsx
+    <Camera strokeWidth={5} color={'#FAFAFA'} />
+```
+
+## Gallery
+
+All icons in the Lucide collection can be searched in the official gallery, which lists 1,600+ SVG icons.
+Use this [page](https://lucide.dev/icons/) to discover and copy icon names for use with this design system.
+Below this section is an icon gallery used in the Mangos project as a reference, showcasing the set of Lucide icons standardized for common actions, navigation, and status.
+
+<IconGallery>
+    <IconItem name="chevron-left">
+        <DynamicIcon name="chevron-left" />
+    </IconItem>
+
+    <IconItem name="chevron-right">
+        <DynamicIcon name="chevron-right" />
+    </IconItem>
+
+    <IconItem name="chevron-up">
+        <DynamicIcon name="chevron-up" />
+    </IconItem>
+
+    <IconItem name="chevron-down">
+        <DynamicIcon name="chevron-down" />
+    </IconItem>
+
+    <IconItem name="minus">
+        <DynamicIcon name="minus" />
+    </IconItem>
+
+    <IconItem name="plus">
+        <DynamicIcon name="plus" />
+    </IconItem>
+
+    <IconItem name="chevrons-left">
+        <DynamicIcon name="chevrons-left" />
+    </IconItem>
+
+    <IconItem name="chevrons-right">
+        <DynamicIcon name="chevrons-right" />
+    </IconItem>
+
+    <IconItem name="x">
+        <DynamicIcon name="x" />
+    </IconItem>
+
+    <IconItem name="trash">
+        <DynamicIcon name="trash" />
+    </IconItem>
+
+    <IconItem name="upload">
+        <DynamicIcon name="upload" />
+    </IconItem>
+
+    <IconItem name="funnel">
+        <DynamicIcon name="funnel" />
+    </IconItem>
+
+    <IconItem name="search">
+        <DynamicIcon name="search" />
+    </IconItem>
+
+    <IconItem name="eye">
+        <DynamicIcon name="eye" />
+    </IconItem>
+
+    <IconItem name="eye-off">
+        <DynamicIcon name="eye-off" />
+    </IconItem>
+
+    <IconItem name="check">
+        <DynamicIcon name="check" />
+    </IconItem>
+
+    <IconItem name="circle-check">
+        <DynamicIcon name="circle-check" />
+    </IconItem>
+
+    <IconItem name="triangle-alert">
+        <DynamicIcon name="triangle-alert" />
+    </IconItem>
+
+    <IconItem name="circle-x">
+        <DynamicIcon name="circle-x" />
+    </IconItem>
+
+    <IconItem name="info">
+        <DynamicIcon name="info" />
+    </IconItem>
+
+    <IconItem name="clock-4">
+        <DynamicIcon name="clock-4" />
+    </IconItem>
+
+    <IconItem name="calendar-days">
+        <DynamicIcon name="calendar-days" />
+    </IconItem>
+
+    <IconItem name="menu">
+        <DynamicIcon name="menu" />
+    </IconItem>
+
+    <IconItem name="arrow-right-left">
+        <DynamicIcon name="arrow-right-left" />
+    </IconItem>
+
+    <IconItem name="house">
+        <DynamicIcon name="house" />
+    </IconItem>
+
+    <IconItem name="settings">
+        <DynamicIcon name="settings" />
+    </IconItem>
+
+    <IconItem name="settings">
+        <DynamicIcon name="settings" />
+    </IconItem>
+
+    <IconItem name="credit-card">
+        <DynamicIcon name="credit-card" />
+    </IconItem>
+
+    <IconItem name="landmark">
+        <DynamicIcon name="landmark" />
+    </IconItem>
+
+    <IconItem name="landmark">
+        <DynamicIcon name="landmark" />
+    </IconItem>
+
+    <IconItem name="receipt-text">
+        <DynamicIcon name="receipt-text" />
+    </IconItem>
+
+    <IconItem name="banknote-arrow-down">
+        <DynamicIcon name="banknote-arrow-down" />
+    </IconItem>
+
+    <IconItem name="banknote-arrow-up">
+        <DynamicIcon name="banknote-arrow-up" />
+    </IconItem>
+
+    <IconItem name="wallet">
+        <DynamicIcon name="wallet" />
+    </IconItem>
+
+    <IconItem name="piggy-bank">
+        <DynamicIcon name="piggy-bank" />
+    </IconItem>
+
+    <IconItem name="goal">
+        <DynamicIcon name="goal" />
+    </IconItem>
+</IconGallery>

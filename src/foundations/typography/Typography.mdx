@@ -1,0 +1,152 @@
+import { Meta, Typeset } from '@storybook/addon-docs/blocks';
+
+<Meta title="Foundations/Typography" />
+export const typography = {
+    type: {
+        primary: 'Inter',
+    },
+    weight: {
+        regular: '400',
+        bold: '700',
+        extrabold: '800',
+        black: '900',
+    },
+    size: {
+        s1: 12,
+        s2: 14,
+        s3: 16,
+        m1: 20,
+        m2: 24,
+        m3: 28,
+        l1: 32,
+        l2: 40,
+        l3: 48,
+    },
+};
+
+export const SampleText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
+
+
+# Typography
+
+## Guidelines
+
+### When to use
+
+
+### Sizing and color
+
+
+### Accessibility
+
+## Usage
+
+**Font:** Inter
+
+**Weights:** 400(regular), 500(semi-bold)
+
+<Typeset
+    fontSizes={[
+        Number(32)
+    ]}
+    fontWeight={500}
+    sampleText={'Heading Level 1'}
+    fontFamily={'Inter'}
+/>
+
+<Typeset
+    fontSizes={[
+        Number(28)
+    ]}
+    fontWeight={400}
+    sampleText={'Heading Level 2'}
+    fontFamily={'Inter'}
+/>
+
+<Typeset
+    fontSizes={[
+        Number(26)
+    ]}
+    fontWeight={400}
+    sampleText={'Heading Level 3'}
+    fontFamily={'Inter'}
+/>
+
+<Typeset
+    fontSizes={[
+        Number(24)
+    ]}
+    fontWeight={400}
+    sampleText={'Heading Level 4'}
+    fontFamily={'Inter'}
+/>
+
+<Typeset
+    fontSizes={[
+        Number(22)
+    ]}
+    fontWeight={400}
+    sampleText={'Heading Level 5'}
+    fontFamily={'Inter'}
+/>
+
+<Typeset
+    fontSizes={[
+        Number(20)
+    ]}
+    fontWeight={400}
+    sampleText={'Heading Level 6'}
+    fontFamily={'Inter'}
+/>
+
+<Typeset
+    fontSizes={[
+        Number(16)
+    ]}
+    fontWeight={400}
+    sampleText={'Body 1'}
+    fontFamily={'Inter'}
+/>
+
+<Typeset
+    fontSizes={[
+        Number(14)
+    ]}
+    fontWeight={400}
+    sampleText={'Body 2'}
+    fontFamily={'Inter'}
+/>
+
+<Typeset
+    fontSizes={[
+        Number(14)
+    ]}
+    fontWeight={500}
+    sampleText={'BUTTON'}
+    fontFamily={'Inter'}
+/>
+
+<Typeset
+    fontSizes={[
+        Number(12)
+    ]}
+    fontWeight={400}
+    sampleText={'Caption'}
+    fontFamily={'Inter'}
+/>
+
+<Typeset
+    fontSizes={[
+        Number(10)
+    ]}
+    fontWeight={400}
+    sampleText={'OVERLINE'}
+    fontFamily={'Inter'}
+/>
+
+
+**Font:** Roboto Mono
+
+**Weights:** 400(regular), 500(semi-bold)
+
+<h1 className={'heading-1'}>Teste</h1>
