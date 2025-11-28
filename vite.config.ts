@@ -22,8 +22,12 @@ export default defineConfig({
       formats: ['es', 'cjs'],
     },
     rollupOptions: {
-      // Exclude peer dependencies from the bundle to reduce bundle size
-      external: ['react/jsx-runtime', ...Object.keys(peerDependencies)],
+      external: [
+        'react/jsx-runtime', 
+        ...Object.keys(peerDependencies),
+        'lucide-react',
+        'lucide-react/dynamic',
+      ],
     },
   },
   test: {

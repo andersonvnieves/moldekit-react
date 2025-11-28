@@ -1,7 +1,7 @@
-import type {ButtonProps} from "./Button.props.ts";
+import type {MkButtonProps} from "./MkButton.props.ts";
 import {DynamicIcon} from "lucide-react/dynamic";
 
-function Button({
+function MkButton({
         variant = 'filled',
         color = 'neutral',
         size = 'medium',
@@ -11,7 +11,7 @@ function Button({
         disabled,
         children,
         ...props
-    }: ButtonProps) {
+    }: MkButtonProps) {
 
     const baseStyles = 'flex items-center justify-center text-center rounded-[7px] uppercase focus:outline-none transition-colors duration-300' +
         'disabled:pointer-events-none disabled:cursor-not-allowed';
@@ -44,20 +44,17 @@ function Button({
         outlined: {
             primary: 'border-primary-400 text-primary-800 bg-primary-50 hover:bg-primary-100 focus:bg-primary-100',
             neutral: 'border-neutral-200 text-neutral-700 bg-neutral-50 hover:bg-neutral-200 focus:bg-neutral-100',
-            success: 'border-success-400 text-success-800 bg-success-50 hover:bg-success-100 focus:bg-success-100',
-            // ...other semantic colors
+            success: 'border-success-400 text-success-800 bg-success-50 hover:bg-success-100 focus:bg-success-100'
         },
         transparent: {
             primary: 'text-primary-800 bg-transparent hover:bg-primary-50 focus:bg-primary-100',
             neutral: 'text-neutral-700 bg-transparent hover:bg-neutral-100 focus:bg-neutral-200',
-            success: 'text-success-800 bg-transparent hover:bg-success-50 focus:bg-success-100',
-            // ...other semantic colors
+            success: 'text-success-800 bg-transparent hover:bg-success-50 focus:bg-success-100'
         },
         iconOnly: {
             primary: 'bg-primary-400 text-primary-800 hover:bg-primary-500 focus:bg-primary-100',
             neutral: 'bg-neutral-100 text-neutral-700 hover:bg-neutral-500 focus:bg-neutral-100',
-            success: 'bg-success-400 text-success-800 hover:bg-success-500 focus:bg-success-100',
-            // ...other semantic colors
+            success: 'bg-success-400 text-success-800 hover:bg-success-500 focus:bg-success-100'
         },
     };
 
@@ -91,4 +88,4 @@ function Button({
     );
 }
 
-export default Button
+export default MkButton

@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import Button from './Button.tsx';
+import MkButton from './MkButton.tsx';
 
 
 const meta = {
-  title: "Controls/Button",
-  component: Button,
+  title: "Controls/MkButton",
+  component: MkButton,
   parameters: {
         layout: 'padded',
   },
@@ -16,7 +16,7 @@ const meta = {
         children: 'Button',
         disabled: false
   }
-} satisfies Meta<typeof Button>;
+} satisfies Meta<typeof MkButton>;
 export default meta;
 
 type Story = StoryObj<typeof meta>;

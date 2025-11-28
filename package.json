@@ -1,6 +1,6 @@
 {
   "name": "moldekit-react",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "GPL-3.0-only",
   "author": "Anderson Nieves",
   "type": "module",
@@ -31,12 +31,11 @@
     "build:storybook": "storybook build"
   },
   "dependencies": {
-    "class-variance-authority": "^0.7.1",
-    "lucide-react": "^0.543.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },
   "peerDependencies": {
+    "lucide-react": "^0.543.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },

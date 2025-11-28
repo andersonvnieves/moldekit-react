@@ -1,0 +1,64 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Getting Started" />
+
+
+# Getting Started
+
+This guide will help you quickly set up and use MoldeKit components in your project.
+
+## Installation
+
+To install MoldeKit, use npm or yarn:
+
+```bash
+npm install moldekit-react
+```
+
+MoldeKit depends on Lucid Icons to work, install this dependency too:
+
+```bash
+npm install lucide-react
+```
+
+## Usage
+
+After installing moldekit-react, import the global CSS in your app’s entry point (`main.tsx`or `App.tsx`):
+
+```tsx
+import 'moldekit-react/css';
+```
+Then import and use components in your `.ts` or `.tsx` files:
+
+```tsx
+import { MkButton } from 'moldekit-react';
+
+function MyComponent() {
+  return (
+    <MkButton onClick={() => console.log('clicked')}>
+      Click Me!
+    </MkButton>
+  );
+}
+```
+
+> Note: CSS import goes once at app root; components import per-file as needed.
+
+
+## Prefix Convention
+
+All MoldeKit React components use the `Mk` prefix for clarity and to avoid naming conflicts. For example:
+
+ `MkButton`
+ `MkCard`
+ `MkInput`
+
+## Next Steps
+
+- Explore the components library
+- Follow the documentation for styling and customization guidelines
+- Start building your projects faster with reusable UI elements
+
+---
+
+If you run into any issues, feel free to check the documentation or reach out for help.

@@ -1,3 +1,5 @@
-export {Button} from "./components/Button";
-export type { ButtonProps } from "./components/Button";
+import "./styles/global.css";
+
+export { MkButton } from "./components/MkButton";
+export type { MkButtonProps } from "./components/MkButton";
 

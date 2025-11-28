@@ -1,4 +1,4 @@
-export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface MkButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     variant?: 'filled' | 'outlined' | 'transparent' | 'iconOnly';
     color?: 'primary' | 'neutral' | 'success' | 'warning' | 'danger' | 'info';
     size?: 'small' | 'medium' | 'large';
