@@ -1,6 +1,6 @@
 {
   "name": "moldekit-react",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "license": "GPL-3.0-only",
   "author": "Anderson Nieves",
   "type": "module",
@@ -27,7 +27,7 @@
     "lint": "eslint .",
     "dev": "storybook dev -p 6006",
     "test": "vitest",
-    "build:lib": "tsc && vite build",
+    "build:lib": "tsc --noEmit && vite build",
     "build:storybook": "storybook build"
   },
   "dependencies": {
@@ -67,6 +67,7 @@
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.39.1",
     "vite": "^7.1.2",
+    "vite-plugin-dts": "^4.5.4",
     "vitest": "^3.2.4"
   }
 }

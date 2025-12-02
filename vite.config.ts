@@ -3,6 +3,7 @@ import { join, resolve } from 'node:path';
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
+import dts from 'vite-plugin-dts';
 import { peerDependencies } from './package.json';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -11,7 +12,15 @@ const dirname = typeof __dirname !== 'undefined' ? __dirname : path.dirname(file
 
 // More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
+  plugins: [
+    react(), 
+    tailwindcss(),
+    dts({
+      tsconfigPath: './tsconfig.build.json',
+      outDir: 'dist',
+      insertTypesEntry: true,
+    }),
+  ],
   build: {
     target: 'esnext',
     minify: false,
