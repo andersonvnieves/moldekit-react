@@ -74,6 +74,16 @@
     --color-danger-200: #FFD9D9;
     --color-danger-100: #FFECEC;
 
+    --color-warning-900: #664A16;
+    --color-warning-800: #996F20;
+    --color-warning-700: #CC942B;
+    --color-warning-600: #FFB936;
+    --color-warning-500: #FFC75E;
+    --color-warning-400: #FFD586;
+    --color-warning-300: #FFE3AF;
+    --color-warning-200: #FFF1D7;
+    --color-warning-100: #FFF8EB;
+
 }
 
 .heading-1 {

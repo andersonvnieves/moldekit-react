@@ -57,13 +57,33 @@ export const Info: Story = {
     }
 };
 
+export const Danger: Story = {
+    args: {
+        variant: 'filled',
+        color: 'danger',
+        children: 'Button',
+        size: 'medium',
+    }
+};
+
+export const Warning: Story = {
+    args: {
+        variant: 'filled',
+        color: 'warning',
+        children: 'Button',
+        size: 'medium',
+    }
+};
+
 export const Icon: Story = {
     args: {
         variant: 'filled',
         color: 'neutral',
         children: 'Home',
         size: 'medium',
-        iconName: 'home'
+        iconOnly: true,
+        iconName: 'home',
+        'aria-label': 'Home'
     }
 };
 
@@ -71,7 +91,6 @@ export const Test: Story = {
   args: {
     variant: 'filled',
     color: 'neutral',
-    size: 'medium',
-    children: "Button",
+    size: 'medium'
   }
 };
