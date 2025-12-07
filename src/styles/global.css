@@ -1,96 +1,92 @@
 @import "tailwindcss";
 
 @font-face {
-    font-family: "Inter";
-    src: url("../assets/fonts/Inter-Variable.ttf") format("truetype");
-    font-weight: 100 900;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter-Variable.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "Roboto Mono";
-    src: url("../assets/fonts/RobotoMono-Variable.ttf") format("truetype");
-    font-weight: 100 900;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Roboto Mono";
+  src: url("../assets/fonts/RobotoMono-Variable.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
 }
 
 @theme {
-    /* === Fonts === */
-    --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-    --font-mono: "Roboto Mono", ui-monospace, monospace;
+  /* === Fonts === */
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Roboto Mono", ui-monospace, monospace;
 
+  --color-primary-900: #613404;
+  --color-primary-800: #924d05;
+  --color-primary-700: #c26707;
+  --color-primary-600: #f38109;
+  --color-primary-500: #f59a3a;
+  --color-primary-400: #f8b36b;
+  --color-primary-300: #facd9d;
+  --color-primary-200: #fde6ce;
+  --color-primary-100: #fef2e6;
 
+  --color-neutral-900: #191919;
+  --color-neutral-800: #323232;
+  --color-neutral-700: #4b4b4b;
+  --color-neutral-600: #949494;
+  --color-neutral-500: #afafaf;
+  --color-neutral-400: #c8c8c8;
+  --color-neutral-300: #e1e1e1;
+  --color-neutral-200: #ececec;
+  --color-neutral-100: #f3f3f3;
+  --color-neutral-50: #fcfcfc;
 
-    --color-primary-900: #613404;
-    --color-primary-800: #924D05;
-    --color-primary-700: #C26707;
-    --color-primary-600: #F38109;
-    --color-primary-500: #F59A3A;
-    --color-primary-400: #F8B36B;
-    --color-primary-300: #FACD9D;
-    --color-primary-200: #FDE6CE;
-    --color-primary-100: #FEF2E6;
+  --color-success-900: #005034;
+  --color-success-800: #00774e;
+  --color-success-700: #009f68;
+  --color-success-600: #00c782;
+  --color-success-500: #33d29b;
+  --color-success-400: #66ddb4;
+  --color-success-300: #99e9cd;
+  --color-success-200: #ccf4e6;
+  --color-success-100: #e5f9f2;
 
-    --color-neutral-900: #191919;
-    --color-neutral-800: #323232;
-    --color-neutral-700: #4B4B4B;
-    --color-neutral-600: #949494;
-    --color-neutral-500: #AFAFAF;
-    --color-neutral-400: #C8C8C8;
-    --color-neutral-300: #E1E1E1;
-    --color-neutral-200: #ECECEC;
-    --color-neutral-100: #F3F3F3;
-    --color-neutral-50: #FCFCFC;
+  --color-info-900: #182f60;
+  --color-info-800: #244791;
+  --color-info-700: #305ec1;
+  --color-info-600: #3c76f1;
+  --color-info-500: #6391f4;
+  --color-info-400: #8aadf7;
+  --color-info-300: #b1c8f9;
+  --color-info-200: #d8e4fc;
+  --color-info-100: #ebf1fe;
 
-    --color-success-900: #005034;
-    --color-success-800: #00774E;
-    --color-success-700: #009F68;
-    --color-success-600: #00C782;
-    --color-success-500: #33D29B;
-    --color-success-400: #66DDB4;
-    --color-success-300: #99E9CD;
-    --color-success-200: #CCF4E6;
-    --color-success-100: #E5F9F2;
+  --color-danger-900: #661a1a;
+  --color-danger-800: #982626;
+  --color-danger-700: #cb3333;
+  --color-danger-600: #fe4040;
+  --color-danger-500: #fe6666;
+  --color-danger-400: #fe8c8c;
+  --color-danger-300: #ffb3b3;
+  --color-danger-200: #ffd9d9;
+  --color-danger-100: #ffecec;
 
-    --color-info-900: #182F60;
-    --color-info-800: #244791;
-    --color-info-700: #305EC1;
-    --color-info-600: #3C76F1;
-    --color-info-500: #6391F4;
-    --color-info-400: #8AADF7;
-    --color-info-300: #B1C8F9;
-    --color-info-200: #D8E4FC;
-    --color-info-100: #EBF1FE;
-
-    --color-danger-900: #661A1A;
-    --color-danger-800: #982626;
-    --color-danger-700: #CB3333;
-    --color-danger-600: #FE4040;
-    --color-danger-500: #FE6666;
-    --color-danger-400: #FE8C8C;
-    --color-danger-300: #FFB3B3;
-    --color-danger-200: #FFD9D9;
-    --color-danger-100: #FFECEC;
-
-    --color-warning-900: #664A16;
-    --color-warning-800: #996F20;
-    --color-warning-700: #CC942B;
-    --color-warning-600: #FFB936;
-    --color-warning-500: #FFC75E;
-    --color-warning-400: #FFD586;
-    --color-warning-300: #FFE3AF;
-    --color-warning-200: #FFF1D7;
-    --color-warning-100: #FFF8EB;
-
+  --color-warning-900: #664a16;
+  --color-warning-800: #996f20;
+  --color-warning-700: #cc942b;
+  --color-warning-600: #ffb936;
+  --color-warning-500: #ffc75e;
+  --color-warning-400: #ffd586;
+  --color-warning-300: #ffe3af;
+  --color-warning-200: #fff1d7;
+  --color-warning-100: #fff8eb;
 }
 
 .heading-1 {
-    @apply text-4xl font-bold text-red-500 font-sans;
+  @apply text-4xl font-bold text-red-500 font-sans;
 }
 
 body {
-    font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
 }
-

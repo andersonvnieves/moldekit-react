@@ -1,7 +1,6 @@
-import { Meta } from '@storybook/addon-docs/blocks';
+import { Meta } from "@storybook/addon-docs/blocks";
 
 <Meta title="Getting Started" />
-
 
 # Getting Started
 
@@ -26,38 +25,34 @@ npm install lucide-react
 After installing moldekit-react, import the global CSS in your app’s entry point (`main.tsx`or `App.tsx`):
 
 ```tsx
-import 'moldekit-react/css';
+import "moldekit-react/css";
 ```
 
 or on your main `.css` file:
 
 ```css
-@import 'moldekit-react/css';
+@import "moldekit-react/css";
 ```
+
 Then import and use components in your `.ts` or `.tsx` files:
 
 ```tsx
-import { MkButton } from 'moldekit-react';
+import { MkButton } from "moldekit-react";
 
 function MyComponent() {
-  return (
-    <MkButton onClick={() => console.log('clicked')}>
-      Click Me!
-    </MkButton>
-  );
+  return <MkButton onClick={() => console.log("clicked")}>Click Me!</MkButton>;
 }
 ```
 
 > Note: CSS import goes once at app root; components import per-file as needed.
 
-
 ## Prefix Convention
 
 All MoldeKit React components use the `Mk` prefix for clarity and to avoid naming conflicts. For example:
 
- `MkButton`
- `MkCard`
- `MkInput`
+`MkButton`
+`MkCard`
+`MkInput`
 
 ## Next Steps
 

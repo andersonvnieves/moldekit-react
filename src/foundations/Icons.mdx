@@ -1,5 +1,5 @@
-import { Meta, IconGallery, IconItem } from '@storybook/addon-docs/blocks';
-import {DynamicIcon} from "lucide-react/dynamic";
+import { Meta, IconGallery, IconItem } from "@storybook/addon-docs/blocks";
+import { DynamicIcon } from "lucide-react/dynamic";
 import { Camera } from "lucide-react";
 
 <Meta title="Foundations/Icons" />
@@ -38,11 +38,11 @@ Import icons directly as components, use props like `size`, `color`, and `stroke
 > Tip: Only use the DynamicIcon variant when icon names come from runtime data such as a CMS or configuration.
 
 ```js
-    import {DynamicIcon} from "lucide-react/dynamic";
+import { DynamicIcon } from "lucide-react/dynamic";
 ```
 
 ```jsx
-    <DynamicIcon name="chevron-left" />
+<DynamicIcon name="chevron-left" />
 ```
 
 ### Static import
@@ -50,11 +50,11 @@ Import icons directly as components, use props like `size`, `color`, and `stroke
 > Tip: Only use the DynamicIcon variant when icon names come from runtime data such as a CMS or configuration.
 
 ```js
-    import { Camera } from "lucide-react";
+import { Camera } from "lucide-react";
 ```
 
 ```jsx
-    <Camera strokeWidth={5} color={'#FAFAFA'} />
+<Camera strokeWidth={5} color={"#FAFAFA"} />
 ```
 
 ## Gallery
@@ -207,4 +207,5 @@ Below this section is an icon gallery used in the Mangos project as a reference,
     <IconItem name="goal">
         <DynamicIcon name="goal" />
     </IconItem>
+
 </IconGallery>

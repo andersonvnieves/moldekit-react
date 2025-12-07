@@ -1,41 +1,44 @@
 /// <reference types="vitest/config" />
-import { join, resolve } from 'node:path';
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import tailwindcss from '@tailwindcss/vite';
-import dts from 'vite-plugin-dts';
-import { peerDependencies } from './package.json';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
-import { storybookTest } from '@storybook/addon-vitest/vitest-plugin';
-const dirname = typeof __dirname !== 'undefined' ? __dirname : path.dirname(fileURLToPath(import.meta.url));
+import { join, resolve } from "node:path";
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite";
+import dts from "vite-plugin-dts";
+import { peerDependencies } from "./package.json";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import { storybookTest } from "@storybook/addon-vitest/vitest-plugin";
+const dirname =
+  typeof __dirname !== "undefined"
+    ? __dirname
+    : path.dirname(fileURLToPath(import.meta.url));
 
 // More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
 export default defineConfig({
   plugins: [
-    react(), 
+    react(),
     tailwindcss(),
     dts({
-      tsconfigPath: './tsconfig.build.json',
-      outDir: 'dist',
+      tsconfigPath: "./tsconfig.build.json",
+      outDir: "dist",
       insertTypesEntry: true,
     }),
   ],
   build: {
-    target: 'esnext',
+    target: "esnext",
     minify: false,
     lib: {
-      entry: resolve(__dirname, join('src', 'index.ts')),
-      fileName: 'index',
-      cssFileName: 'style',
-      formats: ['es', 'cjs'],
+      entry: resolve(__dirname, join("src", "index.ts")),
+      fileName: "index",
+      cssFileName: "style",
+      formats: ["es", "cjs"],
     },
     rollupOptions: {
       external: [
-        'react/jsx-runtime', 
+        "react/jsx-runtime",
         ...Object.keys(peerDependencies),
-        'lucide-react',
-        'lucide-react/dynamic',
+        "lucide-react",
+        "lucide-react/dynamic",
       ],
     },
   },
@@ -44,34 +47,37 @@ export default defineConfig({
       // Regular unit tests project
       {
         test: {
-          name: 'unit',
-          include: ['**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
-          exclude: ['**/*.stories.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
-          environment: 'jsdom',
-        }
+          name: "unit",
+          include: ["**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
+          exclude: ["**/*.stories.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
+          environment: "jsdom",
+        },
       },
       // Storybook tests project
       {
         extends: true,
         plugins: [
-        // The plugin will run tests for the stories defined in your Storybook config
-        // See options at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon#storybooktest
-        storybookTest({
-          configDir: path.join(dirname, '.storybook')
-        })],
+          // The plugin will run tests for the stories defined in your Storybook config
+          // See options at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon#storybooktest
+          storybookTest({
+            configDir: path.join(dirname, ".storybook"),
+          }),
+        ],
         test: {
-          name: 'storybook',
+          name: "storybook",
           browser: {
             enabled: true,
             headless: true,
-            provider: 'playwright',
-            instances: [{
-              browser: 'chromium'
-            }]
+            provider: "playwright",
+            instances: [
+              {
+                browser: "chromium",
+              },
+            ],
           },
-          setupFiles: ['.storybook/vitest.setup.ts']
-        }
-      }
-    ]
-  }
+          setupFiles: [".storybook/vitest.setup.ts"],
+        },
+      },
+    ],
+  },
 });

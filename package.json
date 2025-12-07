@@ -24,11 +24,14 @@
     "dist"
   ],
   "scripts": {
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md,mdx,css}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,md,mdx,css}\"",
     "lint": "eslint .",
     "dev": "storybook dev -p 6006",
     "test": "vitest",
     "build:lib": "tsc --noEmit && vite build",
-    "build:storybook": "storybook build"
+    "build:storybook": "storybook build",
+    "prepare": "husky"
   },
   "dependencies": {
     "react": "^19.1.1",
@@ -56,11 +59,15 @@
     "@vitest/browser": "^3.2.4",
     "@vitest/coverage-v8": "^3.2.4",
     "eslint": "^9.33.0",
+    "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "eslint-plugin-storybook": "^10.0.7",
     "globals": "^16.3.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
     "playwright": "^1.55.0",
+    "prettier": "3.7.4",
     "storybook": "^10.0.7",
     "tailwindcss": "^4.1.12",
     "tsup": "^8.5.0",
@@ -69,5 +76,14 @@
     "vite": "^7.1.2",
     "vite-plugin-dts": "^4.5.4",
     "vitest": "^3.2.4"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,mdx,css}": [
+      "prettier --write"
+    ]
   }
 }
