@@ -1,127 +1,280 @@
 import { Meta, Typeset } from "@storybook/addon-docs/blocks";
 
 <Meta title="Foundations/Typography" />
-export const typography = {
-    type: {
-        primary: 'Inter',
-    },
-    weight: {
-        regular: '400',
-        bold: '700',
-        extrabold: '800',
-        black: '900',
-    },
-    size: {
-        s1: 12,
-        s2: 14,
-        s3: 16,
-        m1: 20,
-        m2: 24,
-        m3: 28,
-        l1: 32,
-        l2: 40,
-        l3: 48,
-    },
-};
-
-export const SampleText =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
 
 # Typography
 
-## Guidelines
+The MoldeKit design system’s typography scale establishes a consistent, accessible hierarchy using **two specialized font families**:
+Inter for text content andRoboto Mono for numeric values.
+Built with Tailwind utilities, these semantic CSS classes map directly to HTML elements while ensuring data alignment and readability.
 
-### When to use
+## Dual Font Strategy
 
-### Sizing and color
+MoldeKit uses a deliberate **dual-font approach** for optimal readability and precision:
 
-### Accessibility
+- **`Inter`** for headings, body text, buttons, labels and caption. Clean, variable-width glyphs optimized for extended reading
+- **`Roboto Mono`** for numbers, prices, metrics, and tabular data. Fixed-width characters prevent visual distortion in columns and ensure perfect decimal alignment
 
-## Usage
+**Why two fonts?** Variable-width fonts like Inter create beautiful prose but misalign numbers.
+Monospace fonts solve this for data tables, forms, and financial displays while maintaining design consistency.
 
-**Font:** Inter
+## Accessibility
 
-**Weights:** 400(regular), 500(semi-bold)
+Semantic HTML elements provide built-in accessibility roles for screen readers, eliminating the need for manual ARIA attributes on typography classes.
+Use correct heading tags and content elements.
+These announce hierarchy and structure automatically to assistive technologies like NVDA or VoiceOver.
+
+## Title
+
+Page/app titles, hero sections, landing pages, main navigation headers
+
+> Reserve  mk-title  for page-level headers only, each page should have only one element with this class applied.
+
+### Sample:
 
 <Typeset
-  fontSizes={[Number(32)]}
+  fontFamily="var(--font-sans)"
+  fontSizes={["32px"]}
   fontWeight={500}
-  sampleText={"Heading Level 1"}
-  fontFamily={"Inter"}
+  sampleText={<h1 className="mk-title">Title</h1>}
 />
 
+### Usage
+
+Apply `mk-title` on HTML text elements
+
+```tsx
+<main>
+  <h1 className="mk-title">Title</h1>
+</main>
+```
+
+## Subtitle
+
+Page subtitles, taglines, hero descriptions, secondary page headers
+
+### Sample:
+
 <Typeset
-  fontSizes={[Number(28)]}
+  fontFamily="var(--font-sans)"
+  fontSizes={["28px"]}
   fontWeight={400}
-  sampleText={"Heading Level 2"}
-  fontFamily={"Inter"}
+  sampleText={<h2 className="mk-subtitle">Subtitle</h2>}
 />
 
-<Typeset
-  fontSizes={[Number(26)]}
-  fontWeight={400}
-  sampleText={"Heading Level 3"}
-  fontFamily={"Inter"}
-/>
+### Usage
+
+Apply `mk-subtitle` on HTML text elements
+
+```tsx
+<main>
+  <h2 className="mk-subtitle">Subtitle</h2>
+</main>
+```
+
+## Section Title
+
+Content sections, article/chapter headings, dashboard panels, form groups
+
+### Sample:
 
 <Typeset
-  fontSizes={[Number(24)]}
-  fontWeight={400}
-  sampleText={"Heading Level 4"}
-  fontFamily={"Inter"}
-/>
-
-<Typeset
-  fontSizes={[Number(22)]}
-  fontWeight={400}
-  sampleText={"Heading Level 5"}
-  fontFamily={"Inter"}
-/>
-
-<Typeset
-  fontSizes={[Number(20)]}
-  fontWeight={400}
-  sampleText={"Heading Level 6"}
-  fontFamily={"Inter"}
-/>
-
-<Typeset
-  fontSizes={[Number(16)]}
-  fontWeight={400}
-  sampleText={"Body 1"}
-  fontFamily={"Inter"}
-/>
-
-<Typeset
-  fontSizes={[Number(14)]}
-  fontWeight={400}
-  sampleText={"Body 2"}
-  fontFamily={"Inter"}
-/>
-
-<Typeset
-  fontSizes={[Number(14)]}
+  fontFamily="var(--font-sans)"
+  fontSizes={["32px"]}
   fontWeight={500}
-  sampleText={"BUTTON"}
-  fontFamily={"Inter"}
+  sampleText={<h3 className="mk-section-title">Section Title</h3>}
 />
+
+### Usage
+
+Apply `mk-section-title` on HTML text elements
+
+```tsx
+<main>
+  <h3 className="mk-section-title">Section Title</h3>
+</main>
+```
+
+## Section Subtitle
+
+Section support, section intros, group descriptions, card headers
+
+### Sample:
 
 <Typeset
-  fontSizes={[Number(12)]}
+  fontFamily="var(--font-sans)"
+  fontSizes={["24px"]}
   fontWeight={400}
-  sampleText={"Caption"}
-  fontFamily={"Inter"}
+  sampleText={<h4 className="mk-section-subtitle">Section Subtitle</h4>}
 />
+
+### Usage
+
+Apply `mk-section-subtitle` on HTML text elements
+
+```tsx
+<main>
+  <h4 className="mk-section-subtitle">Section Subtitle</h4>
+</main>
+```
+
+## Content
+
+Main body text, paragraphs, articles, descriptions, list items
+
+### Sample:
 
 <Typeset
-  fontSizes={[Number(10)]}
+  fontFamily="var(--font-sans)"
+  fontSizes={["16px"]}
   fontWeight={400}
-  sampleText={"OVERLINE"}
-  fontFamily={"Inter"}
+  sampleText={<p className="mk-content">Body content</p>}
 />
 
-**Font:** Roboto Mono
+### Usage
 
-**Weights:** 400(regular), 500(semi-bold)
+Apply `mk-content` on HTML text elements
 
-<h1 className={"heading-1"}>Teste</h1>
+```tsx
+<main>
+  <p className="mk-content">Body content</p>
+</main>
+```
+
+## Subcontent
+
+Secondary info, metadata, timestamps, helper text, footnotes
+
+### Sample:
+
+<Typeset
+  fontFamily="var(--font-sans)"
+  fontSizes={["14px"]}
+  fontWeight={400}
+  sampleText={<p className="mk-subcontent">Body subcontent</p>}
+/>
+
+### Usage
+
+Apply `mk-subcontent` on HTML text elements
+
+```tsx
+<main>
+  <p className="mk-subcontent">Body subcontent</p>
+</main>
+```
+
+## Caption
+
+Image/table captions, Charts, diagrams, media descriptions
+
+### Sample:
+
+<Typeset
+  fontFamily="var(--font-sans)"
+  fontSizes={["14px"]}
+  fontWeight={400}
+  sampleText={<span className="mk-caption">captions</span>}
+/>
+
+### Usage
+
+Apply `mk-caption` on HTML text elements
+
+```tsx
+<main>
+  <span className="mk-caption">captions</span>
+</main>
+```
+
+## Label
+
+Form/UI labels, Input labels, badges, small annotations
+
+### Sample:
+
+<Typeset
+  fontFamily="var(--font-sans)"
+  fontSizes={["12px"]}
+  fontWeight={400}
+  sampleText={<label className="mk-label">label</label>}
+/>
+
+### Usage
+
+Apply `mk-label` on HTML text elements
+
+```tsx
+<main>
+  <label className="mk-label">label</label>
+</main>
+```
+
+## Display number
+
+KPI/metrics, dashboard cards, big stats, hero numbers
+
+### Sample:
+
+<Typeset
+  fontFamily="var(--font-mono)"
+  fontSizes={["22px"]}
+  fontWeight={600}
+  sampleText={<h5 className="mk-display-number">R$ 12.345,90</h5>}
+/>
+
+### Usage
+
+Apply `mk-display-number` on HTML text elements
+
+```tsx
+<main>
+  <h5 className="mk-display-number">R$ 12.345,90</h5>
+</main>
+```
+
+## Content Numeric
+
+Table/data values, data tables, inline metrics, prices
+
+### Sample:
+
+<Typeset
+  fontFamily="var(--font-mono)"
+  fontSizes={["16px"]}
+  fontWeight={400}
+  sampleText={<p className="mk-content-numeric">R$ 12.345,90</p>}
+/>
+
+### Usage
+
+Apply `mk-content-numeric` on HTML text elements
+
+```tsx
+<main>
+  <h1 className="mk-title">Title</h1>
+</main>
+```
+
+## Subcontent Numeric
+
+Small metrics, tooltips, axis labels, change indicators (+12.3%)
+
+### Sample:
+
+<Typeset
+  fontFamily="var(--font-mono)"
+  fontSizes={["14px"]}
+  fontWeight={400}
+  sampleText={<p className="mk-subcontent-numeric">R$ 12.345,90</p>}
+/>
+
+### Usage
+
+Apply `mk-subcontent-numeric` on HTML text elements
+
+```tsx
+<main>
+  <p className="mk-subcontent-numeric">R$ 12.345,90</p>
+</main>
+```

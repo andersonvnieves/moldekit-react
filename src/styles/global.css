@@ -21,6 +21,7 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "Roboto Mono", ui-monospace, monospace;
 
+  /* Collor Pallet*/
   --color-primary-900: #613404;
   --color-primary-800: #924d05;
   --color-primary-700: #c26707;
@@ -81,10 +82,161 @@
   --color-warning-300: #ffe3af;
   --color-warning-200: #fff1d7;
   --color-warning-100: #fff8eb;
+
+  /* Tokens*/
+
+  /* Filled Variant Tokens */
+  --button-filled-primary-bg: var(--color-primary-300);
+  --button-filled-primary-text: var(--color-primary-900);
+  --button-filled-primary-hover-bg: var(--color-primary-400);
+  --button-filled-primary-hover-text: var(--color-primary-900);
+  --button-filled-primary-disabled-bg: var(--color-primary-100);
+  --button-filled-primary-disabled-text: var(--color-primary-200);
+
+  --button-filled-neutral-bg: var(--color-neutral-100);
+  --button-filled-neutral-text: var(--color-neutral-900);
+  --button-filled-neutral-hover-bg: var(--color-neutral-200);
+  --button-filled-neutral-hover-text: var(--color-neutral-900);
+  --button-filled-neutral-disabled-bg: var(--color-neutral-200);
+  --button-filled-neutral-disabled-text: var(--color-neutral-400);
+
+  --button-filled-success-bg: var(--color-success-200);
+  --button-filled-success-text: var(--color-success-900);
+  --button-filled-success-hover-bg: var(--color-success-300);
+  --button-filled-success-hover-text: var(--color-success-900);
+  --button-filled-success-disabled-bg: var(--color-success-200);
+  --button-filled-success-disabled-text: var(--color-success-400);
+
+  --button-filled-info-bg: var(--color-info-200);
+  --button-filled-info-text: var(--color-info-900);
+  --button-filled-info-hover-bg: var(--color-info-300);
+  --button-filled-info-hover-text: var(--color-info-900);
+  --button-filled-info-disabled-bg: var(--color-info-200);
+  --button-filled-info-disabled-text: var(--color-info-400);
+
+  --button-filled-danger-bg: var(--color-danger-200);
+  --button-filled-danger-text: var(--color-danger-900);
+  --button-filled-danger-hover-bg: var(--color-danger-300);
+  --button-filled-danger-hover-text: var(--color-danger-900);
+  --button-filled-danger-disabled-bg: var(--color-danger-200);
+  --button-filled-danger-disabled-text: var(--color-danger-400);
+
+  --button-filled-warning-bg: var(--color-warning-200);
+  --button-filled-warning-text: var(--color-warning-900);
+  --button-filled-warning-hover-bg: var(--color-warning-300);
+  --button-filled-warning-hover-text: var(--color-warning-900);
+  --button-filled-warning-disabled-bg: var(--color-danger-200);
+  --button-filled-warning-disabled-text: var(--color-danger-400);
+
+  /* Outlined Variant Tokens */
+  --button-outlined-primary-border: var(--color-primary-700);
+  --button-outlined-primary-text: var(--color-primary-800);
+  --button-outlined-primary-hover-bg: var(--color-primary-100);
+
+  --button-outlined-neutral-border: var(--color-neutral-700);
+  --button-outlined-neutral-text: var(--color-neutral-800);
+  --button-outlined-neutral-hover-bg: var(--color-neutral-100);
+
+  --button-outlined-success-border: var(--color-success-700);
+  --button-outlined-success-text: var(--color-success-800);
+  --button-outlined-success-hover-bg: var(--color-success-100);
+
+  --button-outlined-info-border: var(--color-info-700);
+  --button-outlined-info-text: var(--color-info-800);
+  --button-outlined-info-hover-bg: var(--color-info-100);
+
+  --button-outlined-danger-border: var(--color-danger-700);
+  --button-outlined-danger-text: var(--color-danger-800);
+  --button-outlined-danger-hover-bg: var(--color-danger-100);
+
+  --button-outlined-warning-border: var(--color-warning-700);
+  --button-outlined-warning-text: var(--color-warning-800);
+  --button-outlined-warning-hover-bg: var(--color-warning-100);
+
+  /* Transparent Variant Tokens */
+  --button-transparent-primary-text: var(--color-primary-800);
+  --button-transparent-primary-hover-bg: var(--color-primary-100);
+
+  --button-transparent-neutral-text: var(--color-neutral-800);
+  --button-transparent-neutral-hover-bg: var(--color-neutral-100);
+
+  --button-transparent-success-text: var(--color-success-800);
+  --button-transparent-success-hover-bg: var(--color-success-100);
+
+  --button-transparent-info-text: var(--color-info-800);
+  --button-transparent-info-hover-bg: var(--color-info-100);
+
+  --button-transparent-danger-text: var(--color-danger-800);
+  --button-transparent-danger-hover-bg: var(--color-danger-100);
+
+  --button-transparent-warning-text: var(--color-warning-800);
+  --button-transparent-warning-hover-bg: var(--color-warning-100);
+
+  /*  Border Tokens */
+  --border-default: var(--color-neutral-300);
+
+  /*  Text Color Tokens */
+  --text-heading: var(--color-neutral-900);
+  --text-subheading: var(--color-neutral-600);
+  --text-content: var(--color-neutral-800);
+  --text-subcontent: var(--color-neutral-700);
+
+  /*  Surfaces */
+  --surface-level1: #ffffff;
+  --surface-level2: var(--color-neutral-100);
+  --surface-level3: var(--color-neutral-50);
 }
 
-.heading-1 {
-  @apply text-4xl font-bold text-red-500 font-sans;
+@layer components {
+  .mk-title {
+    @apply text-[32px] font-semibold text-[var(--text-heading)] font-sans;
+  }
+
+  .mk-subtitle {
+    @apply text-[28px] font-normal text-[var(--text-subheading)] font-sans;
+  }
+
+  .mk-section-title {
+    @apply text-[26px] font-normal text-[var(--text-heading)] font-sans;
+  }
+
+  .mk-section-subtitle {
+    @apply text-[24px] font-normal text-[var(--text-subheading)] font-sans;
+  }
+
+  .mk-content {
+    @apply text-base font-medium leading-relaxed text-[var(--text-content)] font-sans;
+  }
+
+  .mk-subcontent {
+    @apply text-sm leading-relaxed text-[var(--text-subcontent)] font-sans;
+  }
+
+  .mk-caption {
+    @apply text-sm leading-relaxed text-[var(--text-content)] font-sans;
+  }
+
+  .mk-label {
+    @apply text-xs font-normal leading-relaxed text-[var(--text-subcontent)] font-sans;
+  }
+
+  .mk-display-number {
+    @apply text-[22px] font-semibold text-[var(--text-heading)] font-mono;
+  }
+
+  .mk-content-numeric {
+    @apply text-base font-medium leading-relaxed text-[var(--text-content)] font-mono;
+  }
+
+  .mk-subcontent-numeric {
+    @apply text-sm leading-relaxed text-[var(--text-subcontent)] font-mono;
+  }
+}
+
+@layer utilities {
+  .mk-btn-active {
+    @apply shadow-inner translate-y-px bg-slate-800;
+  }
 }
 
 body {
