@@ -1,4 +1,4 @@
-import type { MkDividerProps } from "./MkDividerProps.props.ts";
+import type { MkDividerProps } from "./MkDivider.props.ts";
 
 function MkDivider({ className = "" }: MkDividerProps) {
   const baseStyles = `
