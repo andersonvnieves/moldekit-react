@@ -1,6 +1,6 @@
-import type { MkMainProps } from "./MkCard.props.ts";
+import type { MkCardProps } from "./MkCard.props.ts";
 
-function MkCard({ className = "", children }: MkMainProps) {
+function MkCard({ className = "", noPadding = false, children }: MkCardProps) {
   const baseStyles = [
     "w-full h-full p-[3px]",
     "bg-[var(--color-neutral-200)] ",
@@ -8,14 +8,17 @@ function MkCard({ className = "", children }: MkMainProps) {
   ].join(" ");
 
   const contentStyles = [
-    "w-full h-full p-4",
+    "w-full h-full",
     "bg-[var(--surface-level3)] ",
     "border border-[var(--border-default)] rounded-[12px]",
+    "overflow-hidden",
   ].join(" ");
+
+  const paddingStyle = noPadding ? "" : "p-4";
 
   return (
     <section className={`${baseStyles} ${className}`}>
-      <div className={contentStyles}>{children}</div>
+      <div className={`${contentStyles} ${paddingStyle}`}>{children}</div>
     </section>
   );
 }
