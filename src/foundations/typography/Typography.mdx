@@ -72,7 +72,7 @@ Apply `mk-subtitle` on HTML text elements
 </main>
 ```
 
-## Section Title
+## Subheader Title
 
 Content sections, article/chapter headings, dashboard panels, form groups
 
@@ -82,20 +82,20 @@ Content sections, article/chapter headings, dashboard panels, form groups
   fontFamily="var(--font-sans)"
   fontSizes={["32px"]}
   fontWeight={500}
-  sampleText={<h3 className="mk-section-title">Section Title</h3>}
+  sampleText={<h3 className="mk-subheader-title">Section Title</h3>}
 />
 
 ### Usage
 
-Apply `mk-section-title` on HTML text elements
+Apply `mk-subheader-title` on HTML text elements
 
 ```tsx
 <main>
-  <h3 className="mk-section-title">Section Title</h3>
+  <h3 className="mk-subheader-title">Section Title</h3>
 </main>
 ```
 
-## Section Subtitle
+## Subheader Subtitle
 
 Section support, section intros, group descriptions, card headers
 
@@ -105,16 +105,39 @@ Section support, section intros, group descriptions, card headers
   fontFamily="var(--font-sans)"
   fontSizes={["24px"]}
   fontWeight={400}
-  sampleText={<h4 className="mk-section-subtitle">Section Subtitle</h4>}
+  sampleText={<h4 className="mk-subheader-subtitle">Section Subtitle</h4>}
 />
 
 ### Usage
 
-Apply `mk-section-subtitle` on HTML text elements
+Apply `mk-subheader-subtitle` on HTML text elements
 
 ```tsx
 <main>
-  <h4 className="mk-section-subtitle">Section Subtitle</h4>
+  <h4 className="mk-subheader-subtitle">Section Subtitle</h4>
+</main>
+```
+
+## Section Title
+
+Content sections, article/chapter headings, dashboard panels, form groups
+
+### Sample:
+
+<Typeset
+  fontFamily="var(--font-sans)"
+  fontSizes={["22px"]}
+  fontWeight={400}
+  sampleText={<h5 className="mk-section-title">Section Title</h5>}
+/>
+
+### Usage
+
+Apply `mk-section-title` on HTML text elements
+
+```tsx
+<main>
+  <h5 className="mk-section-title">Section Title</h5>
 </main>
 ```
 
@@ -252,7 +275,7 @@ Apply `mk-content-numeric` on HTML text elements
 
 ```tsx
 <main>
-  <h1 className="mk-title">Title</h1>
+  <p className="mk-content-numeric">R$ 12.345,90</p>
 </main>
 ```
 

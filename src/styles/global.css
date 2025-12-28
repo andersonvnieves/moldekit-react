@@ -188,20 +188,24 @@
 }
 
 @layer components {
-  .mk-title {
+  .mk-header-title {
     @apply text-[32px] font-semibold text-[var(--text-heading)] font-sans;
   }
 
-  .mk-subtitle {
+  .mk-header-subtitle {
     @apply text-[28px] font-normal text-[var(--text-subheading)] font-sans;
   }
 
-  .mk-section-title {
+  .mk-subheader-title {
     @apply text-[26px] font-normal text-[var(--text-heading)] font-sans;
   }
 
-  .mk-section-subtitle {
+  .mk-subheader-subtitle {
     @apply text-[24px] font-normal text-[var(--text-subheading)] font-sans;
+  }
+
+  .mk-section-title {
+    @apply text-[22px] font-normal text-[var(--text-heading)] font-sans;
   }
 
   .mk-content {

@@ -18,9 +18,7 @@ type Story = StoryObj<typeof meta>;
 export const Title: Story = {
   render: (args) => (
     <div className="p-6">
-      <MkSectionHeader title={args.title} subtitle={args.subtitle}>
-        {args.children}
-      </MkSectionHeader>
+      <MkSectionHeader title={args.title}>{args.children}</MkSectionHeader>
     </div>
   ),
   args: {
@@ -28,20 +26,26 @@ export const Title: Story = {
   },
 };
 
-export const TitleWithSubtitleAndChildren: Story = {
+export const TitleAndChildren: Story = {
   render: (args) => (
     <div className="p-6">
-      <MkSectionHeader title={args.title} subtitle={args.subtitle}>
-        {args.children}
-      </MkSectionHeader>
+      <MkSectionHeader title={args.title}>{args.children}</MkSectionHeader>
     </div>
   ),
   args: {
     title: "Title",
-    subtitle: "Suttible",
     children: (
-      <div>
-        <MkButton>Test</MkButton>
+      <div className={"flex gap-1"}>
+        <MkButton
+          variant={"transparent"}
+          iconOnly={true}
+          iconName={"chevron-left"}
+        ></MkButton>
+        <MkButton
+          variant={"transparent"}
+          iconOnly={true}
+          iconName={"chevron-right"}
+        ></MkButton>
       </div>
     ),
   },
@@ -50,9 +54,7 @@ export const TitleWithSubtitleAndChildren: Story = {
 export const Test: Story = {
   render: (args) => (
     <div className="p-6">
-      <MkSectionHeader title={args.title} subtitle={args.subtitle}>
-        {args.children}
-      </MkSectionHeader>
+      <MkSectionHeader title={args.title}>{args.children}</MkSectionHeader>
     </div>
   ),
   args: {
