@@ -21,13 +21,6 @@ export const Title: Story = {
   },
 };
 
-export const TitleWithSubtitle: Story = {
-  args: {
-    title: "Title",
-    subtitle: "Suttible",
-  },
-};
-
 export const TitleWithSubtitleAndChildren: Story = {
   args: {
     title: "Title",
