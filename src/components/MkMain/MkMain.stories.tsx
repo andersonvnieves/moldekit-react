@@ -16,7 +16,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Main: Story = {
   render: (args) => (
-    <div className="p-6">
+    <div className="p-6 w-full">
       <MkMain className={args.className}>
         <div className="w-full h-[200px] flex justify-center items-center">
           <p className={"mk-content"}>Content placeholder</p>

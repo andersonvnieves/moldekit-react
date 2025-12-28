@@ -22,6 +22,8 @@ export const Title: Story = {
 };
 
 export const Test: Story = {
-  color: "success",
-  text: "Complete",
+  args: {
+    color: "neutral",
+    text: "Test",
+  },
 };
