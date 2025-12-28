@@ -7,7 +7,7 @@ function MkHeader({ title, subtitle, className, children }: MkHeaderProps) {
     <header className={`${baseStyle} ${className}`}>
       <div>
         <h1 className={"mk-title"}>{title}</h1>
-        {subtitle ? <h2 className={"mk-subtitle"}>subtitle</h2> : null}
+        {subtitle ? <h2 className={"mk-subtitle"}>{subtitle}</h2> : null}
       </div>
       {children ? <div>{children}</div> : null}
     </header>

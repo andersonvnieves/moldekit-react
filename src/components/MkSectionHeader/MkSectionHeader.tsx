@@ -12,7 +12,9 @@ function MkSectionHeader({
     <div className={`${baseStyle} ${className}`}>
       <div>
         <h3 className={"mk-section-title"}>{title}</h3>
-        {subtitle ? <h4 className={"mk-section-subtitle"}>subtitle</h4> : null}
+        {subtitle ? (
+          <h4 className={"mk-section-subtitle"}>{subtitle}</h4>
+        ) : null}
       </div>
       {children ? <div>{children}</div> : null}
     </div>

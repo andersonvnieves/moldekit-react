@@ -16,22 +16,43 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Title: Story = {
+  render: (args) => (
+    <div className="p-6">
+      <MkHeader title={args.title} subtitle={args.subtitle}>
+        {args.children}
+      </MkHeader>
+    </div>
+  ),
   args: {
     title: "Title",
   },
 };
 
 export const TitleWithSubtitle: Story = {
+  render: (args) => (
+    <div className="p-6">
+      <MkHeader title={args.title} subtitle={args.subtitle}>
+        {args.children}
+      </MkHeader>
+    </div>
+  ),
   args: {
     title: "Title",
-    subtitle: "Suttible",
+    subtitle: "Subtitle",
   },
 };
 
 export const TitleWithSubtitleAndChildren: Story = {
+  render: (args) => (
+    <div className="p-6">
+      <MkHeader title={args.title} subtitle={args.subtitle}>
+        {args.children}
+      </MkHeader>
+    </div>
+  ),
   args: {
     title: "Title",
-    subtitle: "Suttible",
+    subtitle: "Subtitle",
     children: (
       <div>
         <MkButton>Test</MkButton>
@@ -41,5 +62,14 @@ export const TitleWithSubtitleAndChildren: Story = {
 };
 
 export const Test: Story = {
-  args: {},
+  render: (args) => (
+    <div className="p-6">
+      <MkHeader title={args.title} subtitle={args.subtitle}>
+        {args.children}
+      </MkHeader>
+    </div>
+  ),
+  args: {
+    title: "Test",
+  },
 };
