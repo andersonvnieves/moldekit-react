@@ -15,9 +15,22 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Horizontal: Story = {
-  args: {},
+  args: {
+    orientation: "horizontal",
+  },
 };
 
-export const Test: Story = {
-  args: {},
+export const Vertical: Story = {
+  args: {
+    orientation: "vertical",
+  },
+  decorators: [
+    (Story) => (
+      <div className="h-32 flex items-center gap-4">
+        <div className="text-sm">Left content</div>
+        <Story />
+        <div className="text-sm">Right content</div>
+      </div>
+    ),
+  ],
 };

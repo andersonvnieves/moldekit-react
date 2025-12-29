@@ -1,16 +1,15 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import MkList from "./MkList.tsx";
-import { MkCard } from "../MkCard";
+import MkDetailedList from "./MkDetailedList.tsx";
 
 const meta = {
-  title: "Components/List",
-  component: MkList,
+  title: "Components/DetailedList",
+  component: MkDetailedList,
   parameters: {
     layout: "fullscreen",
   },
   tags: ["autodocs"],
   args: {},
-} satisfies Meta<typeof MkList>;
+} satisfies Meta<typeof MkDetailedList>;
 export default meta;
 
 type Story = StoryObj<typeof meta>;
@@ -18,9 +17,7 @@ type Story = StoryObj<typeof meta>;
 export const Main: Story = {
   render: (args) => (
     <div className="p-6">
-      <MkCard noPadding={true}>
-        <MkList className={args.className} data={args.data} />
-      </MkCard>
+      <MkDetailedList className={args.className} data={args.data} />
     </div>
   ),
   args: {
@@ -29,25 +26,37 @@ export const Main: Story = {
         title: "Item 1",
         description: "lorem ipsum",
         numericValue: "R$ 123,00",
-        status: { color: "success", text: "Ok" },
+        icon: {
+          color: "neutral",
+          iconName: "home",
+        },
       },
       {
         title: "Item 2",
         description: "lorem ipsum",
         numericValue: "R$ 123,00",
-        status: { color: "success", text: "Ok" },
+        icon: {
+          color: "neutral",
+          iconName: "home",
+        },
       },
       {
         title: "Item 3",
         description: "lorem ipsum",
         numericValue: "R$ 123,00",
-        status: { color: "info", text: "Info" },
+        icon: {
+          color: "neutral",
+          iconName: "home",
+        },
       },
       {
         title: "Item 4",
         description: "lorem ipsum",
         numericValue: "R$ 123,00",
-        status: { color: "danger", text: "Error" },
+        icon: {
+          color: "neutral",
+          iconName: "home",
+        },
       },
     ],
   },
@@ -56,9 +65,7 @@ export const Main: Story = {
 export const NoDescription: Story = {
   render: (args) => (
     <div className="p-6">
-      <MkCard noPadding={true}>
-        <MkList className={args.className} data={args.data} />
-      </MkCard>
+      <MkDetailedList className={args.className} data={args.data} />
     </div>
   ),
   args: {
@@ -72,9 +79,7 @@ export const NoDescription: Story = {
 export const OnlyTitle: Story = {
   render: (args) => (
     <div className="p-6">
-      <MkCard noPadding={true}>
-        <MkList className={args.className} data={args.data} />
-      </MkCard>
+      <MkDetailedList className={args.className} data={args.data} />
     </div>
   ),
   args: {
@@ -85,9 +90,7 @@ export const OnlyTitle: Story = {
 export const Test: Story = {
   render: (args) => (
     <div className="p-6">
-      <MkCard noPadding={true}>
-        <MkList className={args.className} data={args.data} />
-      </MkCard>
+      <MkDetailedList className={args.className} data={args.data} />
     </div>
   ),
   args: { data: [{ title: "Item 1" }, { title: "Item 2" }] },

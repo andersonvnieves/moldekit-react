@@ -1,7 +1,7 @@
 import type { MkStatusIndicatorProps } from "./MkStatusIndicator.props.ts";
 
 function MkStatusIndicator({ color, text }: MkStatusIndicatorProps) {
-  const baseStyle = text ? "p-2 flex items-center gap-1" : "p-2";
+  const baseStyle = text ? "flex items-center gap-1" : "";
 
   const circle =
     "w-[15px] h-[15px] border-2 rounded-full p-[1px] flex items-center justify-center box-border";

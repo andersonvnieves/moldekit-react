@@ -173,7 +173,7 @@
   --button-transparent-warning-hover-bg: var(--color-warning-100);
 
   /*  Border Tokens */
-  --border-default: var(--color-neutral-300);
+  --border-default: var(--color-neutral-200);
 
   /*  Text Color Tokens */
   --text-heading: var(--color-neutral-900);

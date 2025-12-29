@@ -1,6 +1,8 @@
 export interface MkListItemProps {
   title?: string;
-  description?: string;
   numericValue?: string;
-  currency?: string;
+  status?: {
+    color: "primary" | "neutral" | "success" | "warning" | "danger" | "info";
+    text?: string;
+  };
 }

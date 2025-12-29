@@ -12,6 +12,9 @@ export type { MkDividerProps } from "./components/MkDivider";
 export { MkHeader } from "./components/MkHeader";
 export type { MkHeaderProps } from "./components/MkHeader";
 
+export { MkIconBadge } from "./components/MkIconBadge";
+export type { MkIconBadgeProps } from "./components/MkIconBadge";
+
 export { MkList } from "./components/MkList";
 export type { MkListProps } from "./components/MkList";
 
@@ -35,6 +38,12 @@ export type { MkStepperProps } from "./components/MkStepper";
 
 export { MkSubHeader } from "./components/MkSubHeader";
 export type { MkSubHeaderProps } from "./components/MkSubHeader";
+
+export { MkTab } from "./components/MkTab";
+export type { MkTabProps } from "./components/MkTab";
+
+export { MkTopBar } from "./components/MkTopBar";
+export type { MkTopBarProps } from "./components/MkTopBar";
 
 export { MkUserAvatar } from "./components/MkUserAvatar";
 export type { MkUserAvatarProps } from "./components/MkUserAvatar";
