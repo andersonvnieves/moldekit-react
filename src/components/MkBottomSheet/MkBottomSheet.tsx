@@ -32,7 +32,6 @@ function MkBottomSheet({
     } else {
       isInitialMount.current = false;
       setIsOpen(false);
-      // Keep mounted during exit animation (300ms for sheet)
       timeoutRef.current = setTimeout(() => {
         setIsMounted(false);
       }, 300);

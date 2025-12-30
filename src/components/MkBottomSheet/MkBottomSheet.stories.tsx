@@ -19,7 +19,7 @@ export const Title: Story = {
   render: (args) => (
     <>
       <MkSubHeader title={"Modal Title"} subtitle={"Subtitle"} />
-      <MkBottomSheet open={args.open}>
+      <MkBottomSheet open={args.open} height={args.height}>
         <MkSubHeader title={"Modal Title"} subtitle={"Subtitle"} />
         <div className="w-[350px] h-[600px] flex justify-center items-center">
           <p className={"mk-content"}>Content placeholder</p>
@@ -29,6 +29,7 @@ export const Title: Story = {
   ),
   args: {
     open: false,
+    height: "lg",
   },
 };
 
