@@ -1,21 +1,17 @@
 import type { MkNavListProps } from "./MkNavList.props.ts";
-import { DynamicIcon } from "lucide-react/dynamic";
+import MkNavItem from "../MkNavItem/MkNavItem.tsx";
 
-function MkNavList({ data, className }: MkNavListProps) {
+function MkNavList({ data, collapsed, className }: MkNavListProps) {
   return (
     <nav>
-      <ul className={className}>
-        {data.map((item) => (
-          <li
-            className={"flex flex-row flex-wrap justify-center p-[10px] gap-1"}
-          >
-            <DynamicIcon
-              name={item.iconName}
-              size={20}
-              color={"var(--color-neutral-600)"}
-            />
-            <span className={"mk-caption"}>{item.label}</span>
-          </li>
+      <ul className={`flex flex-col gap-[10px] ${className || ""}`}>
+        {data.map((item, index) => (
+          <MkNavItem
+            key={index}
+            label={item.label}
+            iconName={item.iconName}
+            collapsed={collapsed}
+          />
         ))}
       </ul>
     </nav>

@@ -217,11 +217,11 @@
   }
 
   .mk-caption {
-    @apply text-sm leading-relaxed text-[var(--text-content)] font-sans;
+    @apply text-sm leading-none text-[var(--text-content)] font-sans;
   }
 
   .mk-label {
-    @apply text-xs font-normal leading-relaxed text-[var(--text-subcontent)] font-sans;
+    @apply text-xs font-normal leading-none text-[var(--text-subcontent)] font-sans;
   }
 
   .mk-display-number {

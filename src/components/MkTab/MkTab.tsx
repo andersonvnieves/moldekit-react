@@ -5,7 +5,7 @@ function MkTab({ data }: MkTabProps) {
     "w-full p-[2px] flex flex-row gap-1 bg-neutral-100 rounded-[7px]";
 
   const tabStyle =
-    "px-[10px] py-[5px] rounded-[5px] hover:bg-neutral-200 cursor-pointer  transition-all duration-300";
+    "px-[10px] py-[5px] rounded-[5px] hover:bg-neutral-200 cursor-pointer transition-all duration-300";
 
   const selectedTabStyle =
     "bg-[var(--surface-level1)] border-[var(--border-default)] border-1";
