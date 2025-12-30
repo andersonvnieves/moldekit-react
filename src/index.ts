@@ -1,5 +1,8 @@
 import "./styles/global.css";
 
+export { MkBottomSheet } from "./components/MkBottomSheet";
+export type { MkBottomSheetProps } from "./components/MkBottomSheet";
+
 export { MkButton } from "./components/MkButton";
 export type { MkButtonProps } from "./components/MkButton";
 
@@ -20,6 +23,9 @@ export type { MkListProps } from "./components/MkList";
 
 export { MkMain } from "./components/MkMain";
 export type { MkMainProps } from "./components/MkMain";
+
+export { MkModal } from "./components/MkModal";
+export type { MkModalProps } from "./components/MkModal";
 
 export { MkPanel } from "./components/MkPanel";
 export type { MkPanelProps } from "./components/MkPanel";

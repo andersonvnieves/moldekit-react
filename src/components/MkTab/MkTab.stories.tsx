@@ -17,11 +17,17 @@ type Story = StoryObj<typeof meta>;
 export const Title: Story = {
   render: (args) => (
     <div className="p-6">
-      <MkTab data={args.data} />
+      <MkTab
+        data={args.data}
+        onTabSelect={args.onTabSelect}
+        selectedTab={args.selectedTab}
+      />
     </div>
   ),
   args: {
     data: ["Tab1", "Tab2", "Tab3"],
+    onTabSelect: (i) => alert(i),
+    selectedTab: 1,
   },
 };
 

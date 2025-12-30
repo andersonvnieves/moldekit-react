@@ -22,26 +22,35 @@ export const Title: Story = {
   ),
   args: {
     data: [
-      { label: "Home", iconName: "home", link: "http://google.com" },
+      {
+        label: "Home",
+        iconName: "home",
+        link: "http://google.com",
+        isActive: true,
+      },
       {
         label: "Visão Geral",
         iconName: "layout-dashboard",
         link: "http://google.com",
+        isActive: false,
       },
       {
         label: "Recebimentos",
         iconName: "banknote-arrow-down",
         link: "http://google.com",
+        isActive: false,
       },
       {
         label: "Despesas",
         iconName: "banknote-arrow-up",
         link: "http://google.com",
+        isActive: false,
       },
       {
         label: "Investimentos",
         iconName: "piggy-bank",
         link: "http://google.com",
+        isActive: false,
       },
     ],
     collapsed: true,

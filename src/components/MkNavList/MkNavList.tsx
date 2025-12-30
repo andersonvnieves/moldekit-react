@@ -6,12 +6,16 @@ function MkNavList({ data, collapsed, className }: MkNavListProps) {
     <nav>
       <ul className={`flex flex-col gap-[10px] ${className || ""}`}>
         {data.map((item, index) => (
-          <MkNavItem
-            key={index}
-            label={item.label}
-            iconName={item.iconName}
-            collapsed={collapsed}
-          />
+          <li>
+            <MkNavItem
+              key={index}
+              label={item.label}
+              iconName={item.iconName}
+              link={item.link}
+              isActive={item.isActive}
+              collapsed={collapsed}
+            />
+          </li>
         ))}
       </ul>
     </nav>
