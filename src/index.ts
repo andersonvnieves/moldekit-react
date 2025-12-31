@@ -9,6 +9,12 @@ export type { MkBottomSheetProps } from "./components/MkBottomSheet";
 export { MkButton } from "./components/MkButton";
 export type { MkButtonProps } from "./components/MkButton";
 
+export { MkBarChart } from "./components/MkBarChart";
+export type { MkBarChartProps } from "./components/MkBarChart";
+
+export { MkBarHistoryChart } from "./components/MkBarHistoryChart";
+export type { MkBarHistoryChartProps } from "./components/MkBarHistoryChart";
+
 export { MkCard } from "./components/MkCard";
 export type { MkCardProps } from "./components/MkCard";
 
@@ -27,14 +33,23 @@ export type { MkDetailedListProps } from "./components/MkDetailedList";
 export { MkDivider } from "./components/MkDivider";
 export type { MkDividerProps } from "./components/MkDivider";
 
+export { MkDonutChart } from "./components/MkDonutChart";
+export type { MkDonutChartProps } from "./components/MkDonutChart";
+
 export { MkHeader } from "./components/MkHeader";
 export type { MkHeaderProps } from "./components/MkHeader";
+
+export { MkHorizontalBarChart } from "./components/MkHorizontalBarChart";
+export type { MkHorizontalBarChartProps } from "./components/MkHorizontalBarChart";
 
 export { MkIconBadge } from "./components/MkIconBadge";
 export type { MkIconBadgeProps } from "./components/MkIconBadge";
 
 export { MkList } from "./components/MkList";
 export type { MkListProps } from "./components/MkList";
+
+export { MkLineChart } from "./components/MkLineChart";
+export type { MkLineChartProps } from "./components/MkLineChart";
 
 export { MkMain } from "./components/MkMain";
 export type { MkMainProps } from "./components/MkMain";
@@ -66,6 +81,9 @@ export type { MkSectionHeaderProps } from "./components/MkSectionHeader";
 export { MkStatusIndicator } from "./components/MkStatusIndicator";
 export type { MkStatusIndicatorProps } from "./components/MkStatusIndicator";
 
+export { MkStackedBarChart } from "./components/MkStackedBarChart";
+export type { MkStackedBarChartProps } from "./components/MkStackedBarChart";
+
 export { MkStepper } from "./components/MkStepper";
 export type { MkStepperProps } from "./components/MkStepper";
 
@@ -83,6 +101,9 @@ export type { MkTextInputProps } from "./components/MkTextInput";
 
 export { MkTimeInput } from "./components/MkTimeInput";
 export type { MkTimeInputProps } from "./components/MkTimeInput";
+
+export { MkTotalizers } from "./components/MkTotalizers";
+export type { MkTotalizersProps } from "./components/MkTotalizers";
 
 export { MkTopBar } from "./components/MkTopBar";
 export type { MkTopBarProps } from "./components/MkTopBar";
