@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import MkLineChart from "./MkLineChart.tsx";
 
 const meta = {
-  title: "Components/LineChart",
+  title: "Charts & Visualization/LineChart",
   component: MkLineChart,
   parameters: {
     layout: "fullscreen",

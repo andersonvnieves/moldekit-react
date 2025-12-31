@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import MkDetailedList from "./MkDetailedList.tsx";
 
 const meta = {
-  title: "Components/DetailedList",
+  title: "Data Display/DetailedList",
   component: MkDetailedList,
   parameters: {
     layout: "fullscreen",

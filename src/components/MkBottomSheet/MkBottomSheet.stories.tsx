@@ -3,7 +3,7 @@ import MkBottomSheet from "./MkBottomSheet.tsx";
 import { MkSubHeader } from "../MkSubHeader";
 
 const meta = {
-  title: "Components/BottomSheet",
+  title: "Surfaces/BottomSheet",
   component: MkBottomSheet,
   parameters: {
     layout: "fullscreen",

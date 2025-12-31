@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import MkTimeInput from "./MkTimeInput.tsx";
 
 const meta = {
-  title: "Components/TimeInput",
+  title: "Inputs & Controls/TimeInput",
   component: MkTimeInput,
   parameters: {
     layout: "fullscreen",

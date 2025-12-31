@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import MkHorizontalBarChart from "./MkHorizontalBarChart.tsx";
 
 const meta = {
-  title: "Components/HorizontalBarChart",
+  title: "Charts & Visualization/HorizontalBarChart",
   component: MkHorizontalBarChart,
   parameters: {
     layout: "fullscreen",

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import MkRadioButton from "./MkRadioButton.tsx";
 
 const meta = {
-  title: "Components/RadioButton",
+  title: "Inputs & Controls/RadioButton",
   component: MkRadioButton,
   parameters: {
     layout: "fullscreen",

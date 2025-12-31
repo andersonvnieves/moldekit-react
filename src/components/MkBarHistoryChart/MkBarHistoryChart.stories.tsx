@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import MkBarHistoryChart from "./MkBarHistoryChart.tsx";
 
 const meta = {
-  title: "Components/BarHistoryChart",
+  title: "Charts & Visualization/BarHistoryChart",
   component: MkBarHistoryChart,
   parameters: {
     layout: "fullscreen",

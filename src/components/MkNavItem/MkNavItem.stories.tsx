@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import MkNavItem from "./MkNavItem.tsx";
 
 const meta = {
-  title: "Components/NavItem",
+  title: "Navigation/NavItem",
   component: MkNavItem,
   parameters: {
     layout: "fullscreen",

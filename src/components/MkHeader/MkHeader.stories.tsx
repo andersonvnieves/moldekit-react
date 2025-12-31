@@ -3,7 +3,7 @@ import MkHeader from "./MkHeader.tsx";
 import { MkButton } from "../MkButton";
 
 const meta = {
-  title: "Components/Header",
+  title: "Navigation/Header",
   component: MkHeader,
   parameters: {
     layout: "fullscreen",

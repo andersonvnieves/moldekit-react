@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import MkStackedBarChart from "./MkStackedBarChart.tsx";
 
 const meta = {
-  title: "Components/StackedBarChart",
+  title: "Charts & Visualization/StackedBarChart",
   component: MkStackedBarChart,
   parameters: {
     layout: "fullscreen",

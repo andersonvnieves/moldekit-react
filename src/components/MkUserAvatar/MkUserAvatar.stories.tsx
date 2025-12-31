@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import MkUserAvatar from "./MkUserAvatar.tsx";
 
 const meta = {
-  title: "Components/User Avatar",
+  title: "Data Display/User Avatar",
   component: MkUserAvatar,
   parameters: {
     layout: "fullscreen",

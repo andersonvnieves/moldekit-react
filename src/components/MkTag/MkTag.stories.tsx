@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import MkTag from "./MkTag.tsx";
 
 const meta = {
-  title: "Components/Tag",
+  title: "Inputs & Controls/Tag",
   component: MkTag,
   parameters: {
     layout: "fullscreen",

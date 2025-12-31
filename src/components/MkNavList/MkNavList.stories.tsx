@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import MkNavList from "./MkNavList.tsx";
 
 const meta = {
-  title: "Components/NavList",
+  title: "Navigation/NavList",
   component: MkNavList,
   parameters: {
     layout: "fullscreen",

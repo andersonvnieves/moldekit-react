@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import MkDateInput from "./MkDateInput.tsx";
 
 const meta = {
-  title: "Components/DateInput",
+  title: "Inputs & Controls/DateInput",
   component: MkDateInput,
   parameters: {
     layout: "fullscreen",

@@ -3,7 +3,7 @@ import { MkTopBar } from "./index.ts";
 import { MkUserAvatar } from "../MkUserAvatar";
 
 const meta = {
-  title: "Components/TopBar",
+  title: "Navigation/TopBar",
   component: MkTopBar,
   parameters: {
     layout: "fullscreen",

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import MkDonutChart from "./MkDonutChart.tsx";
 
 const meta = {
-  title: "Components/DonutChart",
+  title: "Charts & Visualization/DonutChart",
   component: MkDonutChart,
   parameters: {
     layout: "fullscreen",

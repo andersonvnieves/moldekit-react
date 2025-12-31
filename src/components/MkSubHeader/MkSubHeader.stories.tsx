@@ -3,7 +3,7 @@ import MkSubHeader from "./MkSubHeader.tsx";
 import { MkButton } from "../MkButton";
 
 const meta = {
-  title: "Components/Sub Header",
+  title: "Navigation/Sub Header",
   component: MkSubHeader,
   parameters: {
     layout: "fullscreen",

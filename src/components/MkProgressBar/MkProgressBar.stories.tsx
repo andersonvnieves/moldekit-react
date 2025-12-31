@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import MkProgressBar from "./MkProgressBar.tsx";
 
 const meta = {
-  title: "Components/Progress Bar",
+  title: "Data Display/Progress Bar",
   component: MkProgressBar,
   parameters: {
     layout: "fullscreen",

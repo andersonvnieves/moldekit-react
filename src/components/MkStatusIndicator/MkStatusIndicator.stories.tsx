@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import MkStatusIndicator from "./MkStatusIndicator.tsx";
 
 const meta = {
-  title: "Components/Status Indicator",
+  title: "Feedback/Status Indicator",
   component: MkStatusIndicator,
   parameters: {
     layout: "fullscreen",

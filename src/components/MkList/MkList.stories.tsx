@@ -3,7 +3,7 @@ import MkList from "./MkList.tsx";
 import { MkCard } from "../MkCard";
 
 const meta = {
-  title: "Components/List",
+  title: "Data Display/List",
   component: MkList,
   parameters: {
     layout: "fullscreen",

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import MkTextInput from "./MkTextInput.tsx";
 
 const meta = {
-  title: "Components/TextInput",
+  title: "Inputs & Controls/TextInput",
   component: MkTextInput,
   parameters: {
     layout: "fullscreen",

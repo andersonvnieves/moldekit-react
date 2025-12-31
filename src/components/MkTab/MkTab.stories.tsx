@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import MkTab from "./MkTab.tsx";
 
 const meta = {
-  title: "Components/Tab",
+  title: "Navigation/Tab",
   component: MkTab,
   parameters: {
     layout: "fullscreen",

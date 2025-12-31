@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import MkCheckbox from "./MkCheckbox.tsx";
 
 const meta = {
-  title: "Components/Checkbox",
+  title: "Inputs & Controls/Checkbox",
   component: MkCheckbox,
   parameters: {
     layout: "fullscreen",

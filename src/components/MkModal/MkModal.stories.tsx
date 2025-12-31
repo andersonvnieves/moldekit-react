@@ -3,7 +3,7 @@ import MkModal from "./MkModal.tsx";
 import { MkSubHeader } from "../MkSubHeader";
 
 const meta = {
-  title: "Components/Modal",
+  title: "Surfaces/Modal",
   component: MkModal,
   parameters: {
     layout: "fullscreen",

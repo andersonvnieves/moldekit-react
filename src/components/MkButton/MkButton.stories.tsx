@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import MkButton from "./MkButton.tsx";
 
 const meta = {
-  title: "Controls/Button",
+  title: "Inputs & Controls/Button",
   component: MkButton,
   parameters: {
     layout: "padded",

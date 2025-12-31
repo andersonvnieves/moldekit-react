@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import MkAlert from "./MkAlert.tsx";
 
 const meta = {
-  title: "Components/Alert",
+  title: "Feedback/Alert",
   component: MkAlert,
   parameters: {
     layout: "fullscreen",

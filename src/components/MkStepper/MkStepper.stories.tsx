@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import MkStepper from "./MkStepper.tsx";
 
 const meta = {
-  title: "Components/Stepper",
+  title: "Navigation/Stepper",
   component: MkStepper,
   parameters: {
     layout: "fullscreen",

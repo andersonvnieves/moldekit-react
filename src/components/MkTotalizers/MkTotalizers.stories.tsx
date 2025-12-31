@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import MkTotalizers from "./MkTotalizers.tsx";
 
 const meta = {
-  title: "Components/Totalizers",
+  title: "Data Display/Totalizers",
   component: MkTotalizers,
   parameters: {
     layout: "fullscreen",

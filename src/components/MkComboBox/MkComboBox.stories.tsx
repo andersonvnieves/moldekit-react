@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import MkComboBox from "./MkComboBox.tsx";
 
 const meta = {
-  title: "Components/ComboBox",
+  title: "Inputs & Controls/ComboBox",
   component: MkComboBox,
   parameters: {
     layout: "fullscreen",

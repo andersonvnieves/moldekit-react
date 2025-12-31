@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import MkIconBadge from "./MkIconBadge.tsx";
 
 const meta = {
-  title: "Components/IconBadge",
+  title: "Data Display/IconBadge",
   component: MkIconBadge,
   parameters: {
     layout: "fullscreen",
