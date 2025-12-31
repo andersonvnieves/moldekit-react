@@ -11,7 +11,7 @@ const meta = {
   args: {
     variant: "filled",
     color: "primary",
-    size: "medium",
+    size: "md",
     children: "Button",
     disabled: false,
   },
@@ -25,7 +25,7 @@ export const Primary: Story = {
     variant: "filled",
     color: "primary",
     children: "Button",
-    size: "medium",
+    size: "md",
   },
 };
 
@@ -34,7 +34,7 @@ export const Neutral: Story = {
     variant: "filled",
     color: "neutral",
     children: "Button",
-    size: "medium",
+    size: "md",
   },
 };
 
@@ -43,7 +43,7 @@ export const Success: Story = {
     variant: "filled",
     color: "success",
     children: "Button",
-    size: "medium",
+    size: "md",
   },
 };
 
@@ -52,7 +52,7 @@ export const Info: Story = {
     variant: "filled",
     color: "info",
     children: "Button",
-    size: "medium",
+    size: "md",
   },
 };
 
@@ -61,7 +61,7 @@ export const Danger: Story = {
     variant: "filled",
     color: "danger",
     children: "Button",
-    size: "medium",
+    size: "md",
   },
 };
 
@@ -70,7 +70,7 @@ export const Warning: Story = {
     variant: "filled",
     color: "warning",
     children: "Button",
-    size: "medium",
+    size: "md",
   },
 };
 
@@ -79,7 +79,7 @@ export const Icon: Story = {
     variant: "filled",
     color: "neutral",
     children: "Home",
-    size: "medium",
+    size: "md",
     iconOnly: true,
     iconName: "home",
     "aria-label": "Home",
@@ -90,6 +90,6 @@ export const Test: Story = {
   args: {
     variant: "filled",
     color: "neutral",
-    size: "medium",
+    size: "md",
   },
 };

@@ -1,4 +1,4 @@
-import type { MkDetailedListProps } from "./MkDetailedList.ts";
+import type { MkDetailedListProps } from "./MkDetailedList.props.ts";
 import MkDetailedListItem from "./MkDetailedListItem/MkDetailedListItem.tsx";
 import type { MkDetailedListItemProps } from "./MkDetailedListItem/MkDetailedListItem.props.ts";
 

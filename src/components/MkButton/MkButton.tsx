@@ -4,7 +4,7 @@ import { DynamicIcon } from "lucide-react/dynamic";
 function MkButton({
   variant = "filled",
   color = "neutral",
-  size = "medium",
+  size = "md",
   fullWidth = false,
   iconOnly = false,
   iconName,
@@ -136,9 +136,9 @@ function MkButton({
   };
 
   const sizeStyles: Record<string, string> = {
-    small: "px-3 py-1 text-sm",
-    medium: "px-4 py-2 text-md",
-    large: "px-6 py-3 text-lg",
+    sm: "px-3 py-1 text-sm",
+    md: "px-4 py-2 text-md",
+    lg: "px-6 py-3 text-lg",
   };
 
   const iconOnlySizeStyles: Record<string, string> = {
@@ -148,9 +148,9 @@ function MkButton({
   };
 
   const iconSize: Record<string, string> = {
-    small: "14",
-    medium: "16",
-    large: "18",
+    sm: "14",
+    md: "16",
+    lg: "18",
   };
 
   const styleClass: string = colorStyles[variant][color];

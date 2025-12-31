@@ -1,2 +1,2 @@
 export { default as MkDetailedList } from "./MkDetailedList.tsx";
-export * from "./MkDetailedList.ts";
+export * from "./MkDetailedList.props";
