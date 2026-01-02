@@ -1,34 +1,88 @@
+import { Clock } from "lucide-react";
+import { useState, useCallback, useEffect } from "react";
 import type { MkTimeInputProps } from "./MkTimeInput.props.ts";
 
 function MkTimeInput({
   value,
-  placeholder,
+  placeholder = "00:00",
   size = "md",
   className,
+  onChange,
   ...props
 }: MkTimeInputProps) {
+  const [displayValue, setDisplayValue] = useState(value || "");
+
+  useEffect(() => {
+    if (value !== undefined) {
+      setDisplayValue(value);
+    }
+  }, [value]);
+
+  const applyMask = useCallback((inputValue: string): string => {
+    const digits = inputValue.replace(/\D/g, "");
+    return digits.substring(0, 2) + ":" + digits.substring(2);
+  }, []);
+
+  const handleChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      const maskedValue = applyMask(e.target.value);
+      setDisplayValue(maskedValue);
+
+      if (onChange) {
+        const syntheticEvent = {
+          ...e,
+          target: { ...e.target, value: maskedValue },
+        } as React.ChangeEvent<HTMLInputElement>;
+        onChange(syntheticEvent);
+      }
+    },
+    [applyMask, onChange]
+  );
+
   const baseStyle = [
     "bg-neutral-50 rounded-[7px] border-2 border-neutral-300",
     "text-neutral-800",
     "disabled:cursor-not-allowed disabled:bg-neutral-100 disabled:text-neutral-600",
-    "focus:border-primary-300 focus:outline-none focus:ring-0focus:ring-offset-0",
-    "hover:shadow-[0_0_4px_var(--color-primary-400)] hover:border-primary-300",
+    "enabled:focus:border-primary-300 enabled:focus:outline-none enabled:focus:ring-0focus:ring-offset-0",
+    "enabled:hover:shadow-[0_0_4px_var(--color-primary-400)] enabled:hover:border-primary-300",
     "transition-shadow transition-border duration-300",
   ].join(" ");
 
   const sizeStyles: Record<string, string> = {
-    sm: "px-3 py-1 text-sm font-[14px]",
-    md: 'px-4 py-2 text-md font-[16px]"',
-    lg: 'px-6 py-3 text-lg font-[18px]"',
+    sm: "pl-9 pr-3 py-1 text-sm font-[14px]",
+    md: "pl-10 pr-4 py-2 text-md font-[16px]",
+    lg: "pl-12 pr-6 py-3 text-lg font-[18px]",
+  };
+
+  const iconSizes: Record<string, number> = {
+    sm: 16,
+    md: 18,
+    lg: 20,
+  };
+
+  const iconPositions: Record<string, string> = {
+    sm: "left-2.5",
+    md: "left-3",
+    lg: "left-4",
   };
 
   return (
-    <input
-      className={`${baseStyle} ${sizeStyles[size]} ${className}`}
-      placeholder={placeholder}
-      value={value}
-      {...props}
-    />
+    <div className="relative">
+      <Clock
+        className={`absolute top-1/2 -translate-y-1/2 ${iconPositions[size]} text-neutral-500`}
+        size={iconSizes[size]}
+        aria-hidden="true"
+      />
+      <input
+        type="text"
+        className={`${baseStyle} ${sizeStyles[size]} ${className || ""}`}
+        placeholder={placeholder}
+        value={value !== undefined ? value : displayValue}
+        onChange={handleChange}
+        maxLength={5}
+        {...props}
+      />
+    </div>
   );
 }
 

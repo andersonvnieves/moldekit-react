@@ -11,8 +11,8 @@ function MkNumberInput({
     "bg-neutral-50 rounded-[7px] border-2 border-neutral-300",
     "text-neutral-800",
     "disabled:cursor-not-allowed disabled:bg-neutral-100 disabled:text-neutral-600",
-    "focus:border-primary-300 focus:outline-none focus:ring-0focus:ring-offset-0",
-    "hover:shadow-[0_0_4px_var(--color-primary-400)] hover:border-primary-300",
+    "enabled:focus:border-primary-300 enabled:focus:outline-none enabled:focus:ring-0focus:ring-offset-0",
+    "enabled:hover:shadow-[0_0_4px_var(--color-primary-400)] enabled:hover:border-primary-300",
     "transition-shadow transition-border duration-300",
   ].join(" ");
 

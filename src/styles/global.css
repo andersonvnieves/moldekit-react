@@ -245,4 +245,5 @@
 
 body {
   font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  @apply selection:bg-primary-300 selection:text-primary-900;
 }
