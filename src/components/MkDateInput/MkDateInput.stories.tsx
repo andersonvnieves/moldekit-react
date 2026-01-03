@@ -15,9 +15,29 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Title: Story = {
+  render: (args) => (
+    <div className="p-6 w-full">
+      <MkDateInput
+        className={args.className}
+        placeholder={args.placeholder}
+        size={args.size}
+        disabled={args.disabled}
+      />
+    </div>
+  ),
   args: {},
 };
 
 export const Test: Story = {
+  render: (args) => (
+    <div className="p-6 w-full">
+      <MkDateInput
+        className={args.className}
+        placeholder={args.placeholder}
+        size={args.size}
+        disabled={args.disabled}
+      />
+    </div>
+  ),
   args: {},
 };

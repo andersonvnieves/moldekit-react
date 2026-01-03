@@ -15,9 +15,45 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Title: Story = {
-  args: {},
+  render: (args) => (
+    <div className="p-6 w-full">
+      <MkComboBox
+        className={args.className}
+        size={args.size}
+        disabled={args.disabled}
+        list={args.list}
+      />
+    </div>
+  ),
+  args: {
+    size: "md",
+    disabled: false,
+    list: [
+      { value: "0", label: "Item1" },
+      { value: "1", label: "Item2" },
+      { value: "2", label: "Item3" },
+    ],
+  },
 };
 
 export const Test: Story = {
-  args: {},
+  render: (args) => (
+    <div className="p-6 w-full">
+      <MkComboBox
+        className={args.className}
+        size={args.size}
+        disabled={args.disabled}
+        list={args.list}
+      />
+    </div>
+  ),
+  args: {
+    size: "md",
+    disabled: false,
+    list: [
+      { value: "0", label: "Item1" },
+      { value: "1", label: "Item2" },
+      { value: "2", label: "Item3" },
+    ],
+  },
 };

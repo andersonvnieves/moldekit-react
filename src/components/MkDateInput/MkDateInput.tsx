@@ -1,5 +1,4 @@
 import type { MkDateInputProps } from "./MkDateInput.props.ts";
-import { useEffect, useState } from "react";
 import { Calendar } from "lucide-react";
 
 function MkDateInput({
@@ -9,14 +8,6 @@ function MkDateInput({
   className,
   ...props
 }: MkDateInputProps) {
-  const [displayValue, setDisplayValue] = useState(value || "");
-
-  useEffect(() => {
-    if (value !== undefined) {
-      setDisplayValue(value);
-    }
-  }, [value]);
-
   const baseStyle = [
     "bg-neutral-50 rounded-[7px] border-2 border-neutral-300",
     "text-neutral-800",
@@ -55,8 +46,7 @@ function MkDateInput({
         type="date"
         className={`${baseStyle} ${sizeStyles[size]} ${className || ""}`}
         placeholder={placeholder}
-        value={value !== undefined ? value : displayValue}
-        maxLength={5}
+        value={value}
         {...props}
       />
     </div>
