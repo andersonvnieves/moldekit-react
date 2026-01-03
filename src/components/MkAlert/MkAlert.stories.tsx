@@ -15,9 +15,21 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Title: Story = {
-  args: {},
+  render: (args) => (
+    <div className="p-6">
+      <MkAlert className={args.className} label={args.label} />
+    </div>
+  ),
+  args: {
+    label: "Test Alert!",
+  },
 };
 
 export const Test: Story = {
-  args: {},
+  render: (args) => (
+    <div className="p-6">
+      <MkAlert className={args.className} label={args.label} />
+    </div>
+  ),
+  args: { label: "Test Alert!" },
 };
