@@ -17,19 +17,28 @@ type Story = StoryObj<typeof meta>;
 export const Title: Story = {
   render: (args) => (
     <div className="p-6">
-      <MkAlert className={args.className} label={args.label} />
+      <MkAlert
+        className={args.className}
+        label={args.label}
+        position={args.position}
+      />
     </div>
   ),
   args: {
     label: "Test Alert!",
+    position: "top-center",
   },
 };
 
 export const Test: Story = {
   render: (args) => (
     <div className="p-6">
-      <MkAlert className={args.className} label={args.label} />
+      <MkAlert
+        className={args.className}
+        label={args.label}
+        position={args.position}
+      />
     </div>
   ),
-  args: { label: "Test Alert!" },
+  args: { label: "Test Alert!", position: "top-center" },
 };
