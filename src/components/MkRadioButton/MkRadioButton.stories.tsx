@@ -15,9 +15,51 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Title: Story = {
-  args: {},
+  render: (args) => (
+    <div className="p-6 w-full">
+      <MkRadioButton
+        className={args.className}
+        label={args.label}
+        size={args.size}
+        disabled={args.disabled}
+      />
+    </div>
+  ),
+  args: {
+    label: "Test",
+    disabled: false,
+    size: "sm",
+  },
+};
+
+export const Disabled: Story = {
+  render: (args) => (
+    <div className="p-6 w-full">
+      <MkRadioButton
+        className={args.className}
+        label={args.label}
+        size={args.size}
+        disabled={args.disabled}
+      />
+    </div>
+  ),
+  args: {
+    label: "Test",
+    disabled: true,
+    size: "sm",
+  },
 };
 
 export const Test: Story = {
+  render: (args) => (
+    <div className="p-6 w-full">
+      <MkRadioButton
+        className={args.className}
+        label={args.label}
+        size={args.size}
+        disabled={args.disabled}
+      />
+    </div>
+  ),
   args: {},
 };

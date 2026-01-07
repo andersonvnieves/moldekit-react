@@ -15,9 +15,29 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Title: Story = {
-  args: {},
+  render: (args) => (
+    <div className="p-6">
+      <MkTag data={args.data} />
+    </div>
+  ),
+  args: {
+    data: [
+      { id: "01", label: "Category 1" },
+      { id: "03", label: "Category 2" },
+    ],
+  },
 };
 
 export const Test: Story = {
-  args: {},
+  render: (args) => (
+    <div className="p-6">
+      <MkTag data={args.data} />
+    </div>
+  ),
+  args: {
+    data: [
+      { id: "01", label: "Category 1" },
+      { id: "03", label: "Category 2" },
+    ],
+  },
 };

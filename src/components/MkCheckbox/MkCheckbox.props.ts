@@ -4,4 +4,5 @@ export interface MkCheckboxProps extends Omit<
 > {
   label?: string;
   size?: "sm" | "md" | "lg";
+  className?: string;
 }
