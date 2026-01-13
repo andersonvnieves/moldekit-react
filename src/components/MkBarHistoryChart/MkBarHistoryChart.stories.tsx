@@ -21,12 +21,18 @@ export const Title: Story = {
   ),
   args: {
     data: [
-      { label: "J", value: 80 },
-      { label: "F", value: 50 },
-      { label: "M", value: 89 },
-      { label: "A", value: 45 },
-      { label: "M", value: 95 },
-      { label: "J", value: 5 },
+      { label: "J", value: 80, type: "faded" },
+      { label: "F", value: 50, type: "faded" },
+      { label: "M", value: 89, type: "faded" },
+      { label: "A", value: 45, type: "faded" },
+      { label: "M", value: 95, type: "regular" },
+      { label: "J", value: 45, type: "regular" },
+      { label: "J", value: 85, type: "regular" },
+      { label: "J", value: 5, type: "no-data" },
+      { label: "J", value: 5, type: "no-data" },
+      { label: "J", value: 5, type: "no-data" },
+      { label: "J", value: 5, type: "no-data" },
+      { label: "J", value: 5, type: "no-data" },
     ],
   },
 };
@@ -34,8 +40,23 @@ export const Title: Story = {
 export const Test: Story = {
   render: (args) => (
     <div className="p-6">
-      <MkBarHistoryChart className={args.className} />
+      <MkBarHistoryChart className={args.className} data={args.data} />
     </div>
   ),
-  args: {},
+  args: {
+    data: [
+      { label: "J", value: 80, type: "faded" },
+      { label: "F", value: 50, type: "faded" },
+      { label: "M", value: 89, type: "faded" },
+      { label: "A", value: 45, type: "faded" },
+      { label: "M", value: 95, type: "regular" },
+      { label: "J", value: 45, type: "regular" },
+      { label: "J", value: 85, type: "regular" },
+      { label: "J", value: 5, type: "no-data" },
+      { label: "J", value: 5, type: "no-data" },
+      { label: "J", value: 5, type: "no-data" },
+      { label: "J", value: 5, type: "no-data" },
+      { label: "J", value: 5, type: "no-data" },
+    ],
+  },
 };
