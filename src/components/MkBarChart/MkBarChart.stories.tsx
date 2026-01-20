@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import MkBarChart from "./MkBarChart.tsx";
-import MkBarHistoryChart from "../MkBarHistoryChart/MkBarHistoryChart.tsx";
 
 const meta = {
   title: "Charts & Visualization/BarChart",
@@ -35,7 +34,7 @@ export const Title: Story = {
 export const Test: Story = {
   render: (args) => (
     <div className="p-6">
-      <MkBarHistoryChart className={args.className} data={args.data} />
+      <MkBarChart className={args.className} data={args.data} />
     </div>
   ),
   args: {
