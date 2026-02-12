@@ -32,20 +32,20 @@ function MkCheckbox({
     "appearance-none cursor-pointer",
     "bg-neutral-50 rounded-[7px] border-2 border-neutral-300",
     "transition-all duration-300",
-    "disabled:cursor-not-allowed disabled:bg-neutral-100 disabled:border-neutral-300",
+    "disabled:cursor-not-allowed disabled:bg-neutral-100 disabled:border-neutral-200",
     "enabled:focus:border-primary-300 enabled:focus:outline-none enabled:focus:ring-0",
     "enabled:hover:shadow-[0_0_4px_var(--color-primary-400)] enabled:hover:border-primary-300",
-    "checked:bg-neutral-50 checked:border-primary-300",
-    "checked:enabled:hover:bg-primary-100 checked:enabled:hover:border-primary-300",
+    "checked:bg-neutral-600 checked:border-primary-600",
+    "checked:enabled:hover:bg-primary-700 checked:enabled:hover:border-primary-700",
     "checked:enabled:hover:shadow-[0_0_4px_var(--color-primary-500)]",
-    "disabled:checked:bg-neutral-100 disabled:checked:border-neutral-400",
+    "disabled:checked:bg-neutral-400 disabled:checked:border-neutral-400",
     "relative flex items-center justify-center",
   ].join(" ");
 
   const sizeStyles: Record<string, string> = {
-    sm: "w-5 h-5",
-    md: "w-6 h-6",
-    lg: "w-7 h-7",
+    sm: "w-4 h-4",
+    md: "w-5 h-5",
+    lg: "w-6 h-6",
   };
 
   const iconSizes: Record<string, number> = {
@@ -59,18 +59,6 @@ function MkCheckbox({
     md: "text-md",
     lg: "text-lg",
   };
-
-  const iconStyle = [
-    "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none  z-10",
-    disabled === true
-      ? "text-[var(--color-neutral-400)]"
-      : "text-[var(--color-primary-800)]",
-  ].join(" ");
-
-  const labelStyle = [
-    "text-neutral-800 cursor-pointer select-none",
-    disabled === true ? "cursor-not-allowed text-neutral-600" : "",
-  ].join(" ");
 
   return (
     <div className={`flex items-center gap-2 ${className}`}>
@@ -86,7 +74,7 @@ function MkCheckbox({
         />
         {isChecked && (
           <Check
-            className={iconStyle}
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none text-white z-10"
             size={iconSizes[size]}
             strokeWidth={3}
             aria-hidden="true"
@@ -96,7 +84,9 @@ function MkCheckbox({
       {label && (
         <label
           htmlFor={checkboxId}
-          className={`${labelStyle} ${labelSizeStyles[size]}`}
+          className={`${labelSizeStyles[size]} text-neutral-800 cursor-pointer select-none ${
+            disabled ? "cursor-not-allowed text-neutral-600" : ""
+          }`}
         >
           {label}
         </label>

@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import MkDonutChart from "./MkDonutChart.tsx";
+import type { MkDonutChartProps } from "./MkDonutChart.props.ts";
 
 const meta = {
   title: "Charts & Visualization/DonutChart",
@@ -8,7 +9,16 @@ const meta = {
     layout: "fullscreen",
   },
   tags: ["autodocs"],
-  args: {},
+  args: {
+    data: [
+      { label: "A", value: 45 },
+      { label: "B", value: 15 },
+      { label: "C", value: 30 },
+      { label: "C", value: 10 },
+    ],
+    centerValue: "100",
+    centerLabel: "Total",
+  } satisfies MkDonutChartProps,
 } satisfies Meta<typeof MkDonutChart>;
 export default meta;
 
@@ -19,5 +29,9 @@ export const Title: Story = {
 };
 
 export const Test: Story = {
-  args: {},
+  args: {
+    data: [{ label: "A", value: 60 }],
+    centerValue: "60",
+    centerLabel: "Main",
+  },
 };
