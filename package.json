@@ -5,7 +5,7 @@
   "author": "Anderson Nieves",
   "repository": {
     "type": "git",
-    "url": "https://github.com/andersonvnieves/moldekit-react.git"
+    "url": "https://github.com/andersonvnieves/moldekit-react"
   },
   "type": "module",
   "main": "dist/index.cjs",
