@@ -1,4 +1,4 @@
-name: Publishes released version to npm
+name: publish-lib
 
 on:
   release:
@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       id-token: write
+      contents: write
 
     steps:
       - name: Checkout
@@ -19,7 +20,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          registry-url: https://registry.npmjs.org
+
+      - name: Update npm to latest
+        run: npm install -g npm@latest
 
       - name: Install deps and build
         run: |
