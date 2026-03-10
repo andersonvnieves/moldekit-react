@@ -21,12 +21,14 @@ export const Title: Story = {
         className={args.className}
         label={args.label}
         position={args.position}
+        state={args.state}
       />
     </div>
   ),
   args: {
     label: "Test Alert!",
     position: "top-center",
+    state: "info",
   },
 };
 
@@ -37,8 +39,9 @@ export const Test: Story = {
         className={args.className}
         label={args.label}
         position={args.position}
+        state={args.state}
       />
     </div>
   ),
-  args: { label: "Test Alert!", position: "top-center" },
+  args: { label: "Test Alert!", position: "top-center", state: "info" },
 };

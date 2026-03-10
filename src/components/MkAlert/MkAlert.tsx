@@ -1,6 +1,12 @@
 import type { MkAlertProps } from "./MkAlert.props.ts";
-import { InfoIcon } from "lucide-react";
+import {
+  CircleCheckIcon,
+  CircleXIcon,
+  InfoIcon,
+  TriangleAlertIcon,
+} from "lucide-react";
 import { MkButton } from "../MkButton";
+import type { ReactNode } from "react";
 
 function MkAlert({
   label,
@@ -25,15 +31,43 @@ function MkAlert({
   const labelStyles =
     "mk-caption inline-block align-middle pl-3.5 leading-none";
   const stateStyle: Record<string, string> = {
-    info: "text-info-900",
+    success: "text-success-800",
+    warning: "text-warning-800",
+    danger: "text-danger-800",
+    info: "text-info-800",
   };
+
+  const stateIcons: Record<string, ReactNode> = {
+    success: (
+      <CircleCheckIcon
+        className="inline-block align-middle"
+        color={"var(--color-success-700)"}
+      />
+    ),
+    warning: (
+      <TriangleAlertIcon
+        className="inline-block align-middle"
+        color={"var(--color-warning-700)"}
+      />
+    ),
+    danger: (
+      <CircleXIcon
+        className="inline-block align-middle"
+        color={"var(--color-danger-700)"}
+      />
+    ),
+    info: (
+      <InfoIcon
+        className="inline-block align-middle"
+        color={"var(--color-info-700)"}
+      />
+    ),
+  };
+
   return (
     <div className={`${baseStyles} ${className}`}>
       <div className="inline-block align-middle">
-        <InfoIcon
-          className="inline-block align-middle"
-          color={"var(--color-info-700)"}
-        />
+        {stateIcons[state]}
         <span className={`${labelStyles} ${stateStyle[state]}`}>{label}</span>
       </div>
       <MkButton
