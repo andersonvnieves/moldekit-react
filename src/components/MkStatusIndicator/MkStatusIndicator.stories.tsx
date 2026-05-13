@@ -15,6 +15,11 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Title: Story = {
+  render: (args) => (
+    <div className="p-6">
+      <MkStatusIndicator color={args.color} text={args.text} />
+    </div>
+  ),
   args: {
     color: "success",
     text: "Complete",
@@ -22,6 +27,11 @@ export const Title: Story = {
 };
 
 export const Test: Story = {
+  render: (args) => (
+    <div className="p-6">
+      <MkStatusIndicator color={args.color} text={args.text} />
+    </div>
+  ),
   args: {
     color: "neutral",
     text: "Test",

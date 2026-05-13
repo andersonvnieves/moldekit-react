@@ -1,5 +1,5 @@
 export interface MkTabProps {
-  data: [];
+  data: string[];
   onTabSelect?: (index: number) => void;
   selectedTab?: number;
 }

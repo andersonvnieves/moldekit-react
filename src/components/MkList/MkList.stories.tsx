@@ -32,28 +32,24 @@ export const Main: Story = {
       {
         id: "1",
         title: "Item 1",
-        description: "lorem ipsum",
         numericValue: "R$ 123,00",
         status: { color: "success", text: "Ok" },
       },
       {
         id: "2",
         title: "Item 2",
-        description: "lorem ipsum",
         numericValue: "R$ 123,00",
         status: { color: "success", text: "Ok" },
       },
       {
         id: "3",
         title: "Item 3",
-        description: "lorem ipsum",
         numericValue: "R$ 123,00",
         status: { color: "info", text: "Info" },
       },
       {
         id: "4",
         title: "Item 4",
-        description: "lorem ipsum",
         numericValue: "R$ 123,00",
         status: { color: "danger", text: "Error" },
       },
