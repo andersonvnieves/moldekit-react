@@ -1,6 +1,7 @@
-import type { MkListItemProps } from "./MkListItem/MkListItem.props.ts";
+import type { MkListItemData } from "./MkListItem/MkListItem.data.ts";
 
 export interface MkListProps {
   className?: string;
-  data: MkListItemProps[];
+  data: MkListItemData[];
+  onClick?: (item: MkListItemData) => void;
 }

@@ -1,11 +1,6 @@
-import type { IconName } from "lucide-react/dynamic";
+import type { MkDetailedListItemData } from "./MkDetailedListItem.data.ts";
 
 export interface MkDetailedListItemProps {
-  title?: string;
-  description?: string;
-  numericValue?: string;
-  icon?: {
-    color: "primary" | "neutral" | "success" | "warning" | "danger" | "info";
-    iconName: IconName;
-  };
+  data: MkDetailedListItemData;
+  onClick?: () => void;
 }
