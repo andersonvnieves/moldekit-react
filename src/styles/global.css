@@ -181,6 +181,10 @@
   --text-content: var(--color-neutral-800);
   --text-subcontent: var(--color-neutral-700);
 
+  --text-success: var(--color-success-900);
+  --text-danger: var(--color-danger-900);
+  --text-neutral: var(--color-neutral-800);
+
   /*  Surfaces */
   --surface-level1: #ffffff;
   --surface-level2: var(--color-neutral-100);
