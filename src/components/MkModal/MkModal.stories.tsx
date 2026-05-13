@@ -1,6 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import MkModal from "./MkModal.tsx";
 import { MkSubHeader } from "../MkSubHeader";
+import { useState } from "react";
+import { MkButton } from "../MkButton";
 
 const meta = {
   title: "Surfaces/Modal",
@@ -16,14 +18,21 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Title: Story = {
-  render: (args) => (
-    <MkModal open={args.open}>
-      <MkSubHeader title={"Modal Title"} subtitle={"Subtitle"} />
-      <div className="w-[350px] h-[600px] flex justify-center items-center">
-        <p className={"mk-content"}>Content placeholder</p>
+  render: () => {
+    const [open, setOpen] = useState(false);
+
+    return (
+      <div className="p-6">
+        <MkButton children="Open Modal" onClick={() => setOpen(true)} />
+        <MkModal open={open} onClose={() => setOpen(false)}>
+          <MkSubHeader title="Modal Title" subtitle="Subtitle" />
+          <div className="w-[350px] h-[600px] flex justify-center items-center">
+            <p className="mk-content">Content placeholder</p>
+          </div>
+        </MkModal>
       </div>
-    </MkModal>
-  ),
+    );
+  },
   args: {
     open: false,
   },

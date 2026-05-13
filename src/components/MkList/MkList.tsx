@@ -1,20 +1,15 @@
 import type { MkListProps } from "./MkList.props.ts";
 import MkListItem from "./MkListItem/MkListItem.tsx";
-import type { MkListItemProps } from "./MkListItem/MkListItem.props.ts";
 import { MkDivider } from "../MkDivider";
+import type { MkListItemData } from "./MkListItem/MkListItem.data.ts";
 
-function MkList({ className, data }: MkListProps) {
-  //Nao esquecer do empty state
+function MkList({ className, data, onClick }: MkListProps) {
+  //TODO: Nao esquecer do empty state
   return (
     <div className={className}>
-      {data.map((element: MkListItemProps, index: number) => (
+      {data.map((element: MkListItemData, index: number) => (
         <div key={index}>
-          <MkListItem
-            title={element.title}
-            description={element.description}
-            numericValue={element.numericValue}
-            status={element.status}
-          />
+          <MkListItem data={element} onClick={() => onClick?.(element)} />
           {index < data.length - 1 && <MkDivider />}
         </div>
       ))}

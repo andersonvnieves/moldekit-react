@@ -27,6 +27,9 @@ export type { MkComboBoxProps } from "./components/MkComboBox";
 export { MkDateInput } from "./components/MkDateInput";
 export type { MkDateInputProps } from "./components/MkDateInput";
 
+export { MkDeltaIndicator } from "./components/MkDeltaIndicator";
+export type { MkDeltaIndicatorProps } from "./components/MkDeltaIndicator";
+
 export { MkDetailedList } from "./components/MkDetailedList";
 export type { MkDetailedListProps } from "./components/MkDetailedList";
 

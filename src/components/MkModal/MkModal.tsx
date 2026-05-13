@@ -13,24 +13,27 @@ function MkModal({
     const dialog = dialogRef.current;
     if (!dialog) return;
 
-    if (open) {
+    if (open && !dialog.open) {
       dialog.showModal();
-    } else {
-      onClose?.();
+    }
+
+    if (!open && dialog.open) {
       dialog.close();
     }
   }, [open]);
 
+  const requestClose = () => {
+    onClose?.();
+  };
+
   const handleBackdropClick = (e: React.MouseEvent<HTMLDialogElement>) => {
     if (e.target === e.currentTarget) {
-      onClose?.();
-      dialogRef.current?.close();
+      requestClose();
     }
   };
 
   const handleClose = () => {
-    onClose?.();
-    dialogRef.current?.close();
+    requestClose();
   };
 
   const baseStyles = [
@@ -40,6 +43,7 @@ function MkModal({
     "overflow-hidden",
     "backdrop:backdrop-blur-sm",
     "m-auto",
+    "outline-none",
     className,
   ].join(" ");
 
@@ -65,7 +69,9 @@ function MkModal({
     >
       <div className={borderContentStyles}>
         <div className={contentStyles}>
-          <div className="w-full max-h-[80vh] overflow-y-auto">{children}</div>
+          <div className="w-full max-h-[80vh] p-2 overflow-y-auto">
+            {children}
+          </div>
         </div>
       </div>
     </dialog>

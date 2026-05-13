@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import MkDivider from "./MkDivider.tsx";
 
 const meta = {
-  title: "Components/Divider",
+  title: "Surfaces/Divider",
   component: MkDivider,
   parameters: {
     layout: "padded",

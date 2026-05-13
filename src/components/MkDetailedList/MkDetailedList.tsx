@@ -1,19 +1,17 @@
 import type { MkDetailedListProps } from "./MkDetailedList.props.ts";
 import MkDetailedListItem from "./MkDetailedListItem/MkDetailedListItem.tsx";
-import type { MkDetailedListItemProps } from "./MkDetailedListItem/MkDetailedListItem.props.ts";
+import type { MkDetailedListItemData } from "./MkDetailedListItem/MkDetailedListItem.data.ts";
 
-function MkDetailedList({ className, data }: MkDetailedListProps) {
+function MkDetailedList({ className, data, onClick }: MkDetailedListProps) {
   //Nao esquecer do empty state
   const baseStyle = "flex flex-col gap-2";
   return (
     <div className={`${baseStyle} ${className}`}>
-      {data.map((element: MkDetailedListItemProps, index: number) => (
+      {data.map((element: MkDetailedListItemData, index: number) => (
         <div key={index}>
           <MkDetailedListItem
-            title={element.title}
-            description={element.description}
-            numericValue={element.numericValue}
-            icon={element.icon}
+            data={element}
+            onClick={() => onClick?.(element)}
           />
         </div>
       ))}
