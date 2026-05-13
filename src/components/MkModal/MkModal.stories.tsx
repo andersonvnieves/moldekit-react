@@ -26,7 +26,6 @@ export const Title: Story = {
         <MkButton children="Open Modal" onClick={() => setOpen(true)} />
         <MkModal open={open} onClose={() => setOpen(false)}>
           <MkSubHeader title="Modal Title" subtitle="Subtitle" />
-
           <div className="w-[350px] h-[600px] flex justify-center items-center">
             <p className="mk-content">Content placeholder</p>
           </div>
