@@ -11,15 +11,19 @@ function MkDetailedListItem({
   return (
     <div
       className={
-        "flex justify-between items-center bg-var(--surface-level1) hover:bg-neutral-100 p-3 h-[70px] transition-all duration-300 border-1 border-[var(--border-default)] rounded-xl"
+        "flex justify-between items-center bg-var(--surface-level1) hover:bg-neutral-100 p-2 h-[70px] transition-all duration-300 border-1 border-[var(--border-default)] rounded-xl"
       }
     >
-      {icon ? (
-        <MkIconBadge color={icon.color} iconName={icon.iconName} />
-      ) : null}
-      <div className={"flex flex-col justify-center"}>
-        <p className={"mk-content"}>{title}</p>
-        {description ? <p className={"mk-subcontent"}>{description}</p> : null}
+      <div className={`flex items-center gap-2`}>
+        {icon ? (
+          <MkIconBadge color={icon.color} iconName={icon.iconName} />
+        ) : null}
+        <div className={"flex flex-col justify-center"}>
+          <p className={"mk-content"}>{title}</p>
+          {description ? (
+            <p className={"mk-subcontent"}>{description}</p>
+          ) : null}
+        </div>
       </div>
       <div className={"flex items-center"}>
         {numericValue ? (
