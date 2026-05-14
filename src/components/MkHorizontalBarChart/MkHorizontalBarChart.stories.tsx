@@ -15,9 +15,33 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Title: Story = {
-  args: {},
+  render: (args) => (
+    <div className="p-6">
+      <MkHorizontalBarChart data={args.data} />
+    </div>
+  ),
+  args: {
+    data: [
+      { label: "A", value: 45 },
+      { label: "B", value: 15 },
+      { label: "C", value: 30 },
+      { label: "C", value: 10 },
+    ],
+  },
 };
 
 export const Test: Story = {
-  args: {},
+  render: (args) => (
+    <div className="p-6">
+      <MkHorizontalBarChart data={args.data} />
+    </div>
+  ),
+  args: {
+    data: [
+      { label: "A", value: 45 },
+      { label: "B", value: 15 },
+      { label: "C", value: 30 },
+      { label: "C", value: 10 },
+    ],
+  },
 };
