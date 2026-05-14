@@ -1,8 +1,8 @@
-import type { MkTotalizersProps } from "./MkTotalizers.props.ts";
+import type { MkTotalizerProps } from "./MkTotalizer.props.ts";
 import { MkCard } from "../MkCard";
 import MkDeltaIndicator from "../MkDeltaIndicator/MkDeltaIndicator.tsx";
 
-function MkTotalizers({ label, value, delta, className }: MkTotalizersProps) {
+function MkTotalizer({ label, value, delta, className }: MkTotalizerProps) {
   const headerStyles =
     "flex flex-item align-center justify-between w-full h-[30px]";
 
@@ -23,4 +23,4 @@ function MkTotalizers({ label, value, delta, className }: MkTotalizersProps) {
   );
 }
 
-export default MkTotalizers;
+export default MkTotalizer;

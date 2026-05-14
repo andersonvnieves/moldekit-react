@@ -1,47 +1,62 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import MkAlert from "./MkAlert.tsx";
+
+import MkAlertContainer from "./MkAlertContainer";
+import { mkAlertService } from "./MkAlert.service";
+import { MkButton } from "../MkButton";
 
 const meta = {
   title: "Feedback/Alert",
-  component: MkAlert,
+  component: MkAlertContainer,
   parameters: {
     layout: "fullscreen",
   },
   tags: ["autodocs"],
-  args: {},
-} satisfies Meta<typeof MkAlert>;
+} satisfies Meta<typeof MkAlertContainer>;
+
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Title: Story = {
-  render: (args) => (
-    <div className="p-6">
-      <MkAlert
-        className={args.className}
-        label={args.label}
-        position={args.position}
-        state={args.state}
-      />
-    </div>
-  ),
-  args: {
-    label: "Test Alert!",
-    position: "top-center",
-    state: "info",
-  },
-};
+export const Interactive: Story = {
+  render: () => {
+    return (
+      <div className="p-8">
+        <div className="flex gap-3">
+          <MkButton
+            color={"success"}
+            onClick={() =>
+              mkAlertService.success("Transaction completed successfully")
+            }
+          >
+            Success
+          </MkButton>
 
-export const Test: Story = {
-  render: (args) => (
-    <div className="p-6">
-      <MkAlert
-        className={args.className}
-        label={args.label}
-        position={args.position}
-        state={args.state}
-      />
-    </div>
-  ),
-  args: { label: "Test Alert!", position: "top-center", state: "info" },
+          <MkButton
+            color={"warning"}
+            onClick={() =>
+              mkAlertService.warning("Your card is about to expire")
+            }
+          >
+            Warning
+          </MkButton>
+
+          <MkButton
+            color={"danger"}
+            onClick={() => mkAlertService.danger("Failed to process payment")}
+          >
+            Danger
+          </MkButton>
+
+          <MkButton
+            color={"info"}
+            onClick={() => mkAlertService.info("New update available")}
+          >
+            Info
+          </MkButton>
+        </div>
+
+        <MkAlertContainer />
+      </div>
+    );
+  },
 };

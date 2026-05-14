@@ -1,7 +1,10 @@
 import "./styles/global.css";
 
 export { MkAlert } from "./components/MkAlert";
+export { MkAlertContainer } from "./components/MkAlert";
+export { mkAlertService } from "./components/MkAlert";
 export type { MkAlertProps } from "./components/MkAlert";
+export type { MkAlertTypes } from "./components/MkAlert";
 
 export { MkBottomSheet } from "./components/MkBottomSheet";
 export type { MkBottomSheetProps } from "./components/MkBottomSheet";
@@ -108,8 +111,8 @@ export type { MkTextInputProps } from "./components/MkTextInput";
 export { MkTimeInput } from "./components/MkTimeInput";
 export type { MkTimeInputProps } from "./components/MkTimeInput";
 
-export { MkTotalizers } from "./components/MkTotalizers";
-export type { MkTotalizersProps } from "./components/MkTotalizers";
+export { MkTotalizers } from "./components/MkTotalizer";
+export type { MkTotalizerProps } from "./components/MkTotalizer";
 
 export { MkTopBar } from "./components/MkTopBar";
 export type { MkTopBarProps } from "./components/MkTopBar";

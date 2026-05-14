@@ -1,15 +1,15 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import MkTotalizers from "./MkTotalizers.tsx";
+import MkTotalizer from "./MkTotalizer.tsx";
 
 const meta = {
-  title: "Data Display/Totalizers",
-  component: MkTotalizers,
+  title: "Data Display/Totalizer",
+  component: MkTotalizer,
   parameters: {
     layout: "fullscreen",
   },
   tags: ["autodocs"],
   args: {},
-} satisfies Meta<typeof MkTotalizers>;
+} satisfies Meta<typeof MkTotalizer>;
 export default meta;
 
 type Story = StoryObj<typeof meta>;
@@ -17,7 +17,7 @@ type Story = StoryObj<typeof meta>;
 export const Title: Story = {
   render: (args) => (
     <div className="p-6 w-full">
-      <MkTotalizers label={args.label} value={args.value}></MkTotalizers>
+      <MkTotalizer label={args.label} value={args.value}></MkTotalizer>
     </div>
   ),
   args: {
@@ -29,11 +29,11 @@ export const Title: Story = {
 export const WithDelta: Story = {
   render: (args) => (
     <div className="p-6 w-full">
-      <MkTotalizers
+      <MkTotalizer
         label={args.label}
         value={args.value}
         delta={args.delta}
-      ></MkTotalizers>
+      ></MkTotalizer>
     </div>
   ),
   args: {
@@ -50,7 +50,7 @@ export const WithDelta: Story = {
 export const Test: Story = {
   render: (args) => (
     <div className="p-6 w-full">
-      <MkTotalizers label={args.label} value={args.value}></MkTotalizers>
+      <MkTotalizer label={args.label} value={args.value}></MkTotalizer>
     </div>
   ),
   args: {
