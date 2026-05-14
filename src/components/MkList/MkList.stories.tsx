@@ -97,7 +97,7 @@ export const OnlyTitle: Story = {
   },
 };
 
-export const Test: Story = {
+export const NotClickable: Story = {
   render: (args) => (
     <div className="p-6">
       <MkCard noPadding={true}>

@@ -1,4 +1,4 @@
-export interface MkTotalizersProps {
+export interface MkTotalizerProps {
   label?: string;
   value: string;
   delta?: {

@@ -1,5 +1,5 @@
 import type { MkBottomSheetProps } from "./MkBottomSheet.props.ts";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 
 function MkBottomSheet({
   open = false,
@@ -9,35 +9,26 @@ function MkBottomSheet({
   className = "",
 }: MkBottomSheetProps) {
   const [isMounted, setIsMounted] = useState(open);
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
-  const isInitialMount = useRef(true);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     if (open) {
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
-        timeoutRef.current = null;
-      }
       setIsMounted(true);
 
-      if (isInitialMount.current) {
-        isInitialMount.current = false;
-      } else {
-        requestAnimationFrame(() => {});
-      }
+      requestAnimationFrame(() => {
+        setTimeout(() => {
+          setIsVisible(true);
+        }, 10);
+      });
     } else {
-      isInitialMount.current = false;
-      requestClose();
-      timeoutRef.current = setTimeout(() => {
+      setIsVisible(false);
+
+      const timeout = setTimeout(() => {
         setIsMounted(false);
       }, 300);
-    }
 
-    return () => {
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
-      }
-    };
+      return () => clearTimeout(timeout);
+    }
   }, [open]);
 
   const requestClose = () => {
@@ -53,7 +44,7 @@ function MkBottomSheet({
 
   const backdropStyles =
     "fixed inset-0 z-40 backdrop-blur-sm transition-opacity duration-200";
-  const backdropOpcatityAnimation = open ? "opacity-100" : "opacity-0";
+  const backdropOpcatityAnimation = isVisible ? "opacity-100" : "opacity-0";
 
   const sheetStyles = [
     "fixed bottom-0 left-0 right-0 z-50",
@@ -61,7 +52,9 @@ function MkBottomSheet({
     "border-t border-[var(--border-default)] rounded-t-[20px] shadow-2xl",
     "transition-transform duration-300 ease-out",
   ].join(" ");
-  const sheetTranslateAnimation = open ? "translate-y-0" : "translate-y-full";
+  const sheetTranslateAnimation = isVisible
+    ? "translate-y-0"
+    : "translate-y-full";
 
   const handleBackdropClick = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) {

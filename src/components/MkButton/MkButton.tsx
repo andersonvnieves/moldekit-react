@@ -13,10 +13,11 @@ function MkButton({
   children,
   ...props
 }: MkButtonProps) {
-  const baseStyles =
-    "flex items-center justify-center transition-colors duration-300" +
-    "text-center rounded-[7px] uppercase" +
-    "disabled:pointer-events-none disabled:cursor-not-allowed focus:outline-none";
+  const baseStyles = [
+    "flex items-center justify-center transition-colors duration-300",
+    "text-center rounded-[7px] uppercase cursor-pointer",
+    "disabled:pointer-events-none disabled:cursor-not-allowed focus:outline-none",
+  ].join(" ");
 
   const colorStyles: Record<string, Record<string, string>> = {
     filled: {

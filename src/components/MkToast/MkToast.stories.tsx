@@ -1,20 +1,20 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import MkAlertContainer from "./MkAlertContainer";
-import { mkAlertService } from "./MkAlert.service";
+import MkToastContainer from "./MkToastContainer";
+import { mkToastService } from "./MkToast.service";
 import { MkButton } from "../MkButton";
 
 const meta = {
-  title: "Feedback/Alert",
-  component: MkAlertContainer,
+  title: "Feedback/Toast",
+  component: MkToastContainer,
   parameters: {
     layout: "fullscreen",
   },
   tags: ["autodocs"],
   args: {
-    position: "top-right",
+    position: "top-center",
   },
-} satisfies Meta<typeof MkAlertContainer>;
+} satisfies Meta<typeof MkToastContainer>;
 
 export default meta;
 
@@ -28,7 +28,7 @@ export const Variants: Story = {
           <MkButton
             color={"success"}
             onClick={() =>
-              mkAlertService.success("Transaction completed successfully")
+              mkToastService.success("Transaction completed successfully")
             }
           >
             Success
@@ -37,7 +37,7 @@ export const Variants: Story = {
           <MkButton
             color={"warning"}
             onClick={() =>
-              mkAlertService.warning("Your card is about to expire")
+              mkToastService.warning("Your card is about to expire")
             }
           >
             Warning
@@ -45,20 +45,20 @@ export const Variants: Story = {
 
           <MkButton
             color={"danger"}
-            onClick={() => mkAlertService.danger("Failed to process payment")}
+            onClick={() => mkToastService.danger("Failed to process payment")}
           >
             Danger
           </MkButton>
 
           <MkButton
             color={"info"}
-            onClick={() => mkAlertService.info("New update available")}
+            onClick={() => mkToastService.info("New update available")}
           >
             Info
           </MkButton>
         </div>
 
-        <MkAlertContainer position={args.position} />
+        <MkToastContainer position={args.position} />
       </div>
     );
   },
