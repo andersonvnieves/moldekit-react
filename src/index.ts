@@ -4,7 +4,7 @@ export { MkAlert } from "./components/MkAlert";
 export { MkAlertContainer } from "./components/MkAlert";
 export { mkAlertService } from "./components/MkAlert";
 export type { MkAlertProps } from "./components/MkAlert";
-export type { MkAlertTypes } from "./components/MkAlert";
+export type { MkAlertContainerProps } from "./components/MkAlert";
 
 export { MkBottomSheet } from "./components/MkBottomSheet";
 export type { MkBottomSheetProps } from "./components/MkBottomSheet";

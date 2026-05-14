@@ -1,8 +1,8 @@
-import type { MkAlertTypes } from "./MkAlert.types.ts";
 import { BehaviorSubject, timer } from "rxjs";
+import type { MkAlertProps } from "./MkAlert.props.ts";
 
 class MkAlertService {
-  private alertsSubject = new BehaviorSubject<MkAlertTypes[]>([]);
+  private alertsSubject = new BehaviorSubject<MkAlertProps[]>([]);
 
   alerts$ = this.alertsSubject.asObservable();
 
@@ -10,7 +10,7 @@ class MkAlertService {
     return this.alertsSubject.getValue();
   }
 
-  private set alerts(alerts: MkAlertTypes[]) {
+  private set alerts(alerts: MkAlertProps[]) {
     this.alertsSubject.next(alerts);
   }
 
@@ -20,7 +20,7 @@ class MkAlertService {
   ) {
     const id = crypto.randomUUID();
 
-    const alert: MkAlertTypes = {
+    const alert: MkAlertProps = {
       id,
       label,
       state,

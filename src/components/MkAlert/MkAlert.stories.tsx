@@ -11,17 +11,20 @@ const meta = {
     layout: "fullscreen",
   },
   tags: ["autodocs"],
+  args: {
+    position: "top-right",
+  },
 } satisfies Meta<typeof MkAlertContainer>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Interactive: Story = {
-  render: () => {
+export const Variants: Story = {
+  render: (args) => {
     return (
-      <div className="p-8">
-        <div className="flex gap-3">
+      <div className="p-8 h-[500px]">
+        <div className="flex flex-col gap-3">
           <MkButton
             color={"success"}
             onClick={() =>
@@ -55,8 +58,11 @@ export const Interactive: Story = {
           </MkButton>
         </div>
 
-        <MkAlertContainer />
+        <MkAlertContainer position={args.position} />
       </div>
     );
+  },
+  args: {
+    position: "bottom-center",
   },
 };

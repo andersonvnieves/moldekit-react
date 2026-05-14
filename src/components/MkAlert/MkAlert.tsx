@@ -13,8 +13,6 @@ import { type ReactNode, useEffect, useState } from "react";
 function MkAlert({
   label,
   state = "info",
-  position = "top-right",
-  className = "",
   leaving = false,
   onClose,
 }: MkAlertProps) {
@@ -25,12 +23,6 @@ function MkAlert({
       setMounted(true);
     });
   }, []);
-
-  const positionStyles: Record<string, string> = {
-    "top-right": "top-4 right-4",
-    "top-center": "top-4 left-1/2 -translate-x-1/2",
-    "bottom-center": "bottom-4 left-1/2 -translate-x-1/2",
-  };
 
   const animationStyles = `
     will-change-transform
@@ -52,7 +44,6 @@ function MkAlert({
 
   const baseStyles = [
     "z-[60]",
-    positionStyles[position],
     "p-[20px] w-[380px]",
     "bg-neutral-50",
     "border border-neutral-200",
@@ -104,7 +95,7 @@ function MkAlert({
   };
 
   return (
-    <div className={`${baseStyles} ${className}`}>
+    <div className={`${baseStyles}`}>
       <div className="inline-block align-middle">
         {stateIcons[state]}
 
