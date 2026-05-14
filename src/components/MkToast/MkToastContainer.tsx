@@ -16,11 +16,11 @@ function MkToastContainer({
     };
   }, []);
 
-  const baseStyles = `
-  fixed inset-x-0 z-[999]
-  flex flex-col gap-2 px-4
-  pointer-events-none
-`;
+  const baseStyles = [
+    "fixed inset-x-0 z-[999]",
+    "flex flex-col gap-2 px-4",
+    "pointer-events-none",
+  ].join(" ");
 
   const positionStyles: Record<string, string> = {
     "top-center": "top-4 w-full items-center",

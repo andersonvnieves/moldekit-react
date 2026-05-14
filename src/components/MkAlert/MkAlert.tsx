@@ -26,19 +26,14 @@ function MkAlert({
 
   const animationStyles = `
     will-change-transform
-
     transition-[transform,opacity,filter]
-
     duration-500
-
     ease-[cubic-bezier(0.16,1,0.3,1)]
-
     ${
       mounted && !leaving
         ? "translate-y-0 opacity-100 scale-100 blur-0"
         : "-translate-y-3 opacity-0 scale-[0.98] blur-[6px]"
     }
-
     ${leaving ? "translate-x-6 opacity-0 scale-[0.96]" : ""}
   `;
 
