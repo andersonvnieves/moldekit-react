@@ -81,6 +81,9 @@ export type { MkRadioButtonProps } from "./components/MkRadioButton";
 export { MkSectionHeader } from "./components/MkSectionHeader";
 export type { MkSectionHeaderProps } from "./components/MkSectionHeader";
 
+export { MkSkeleton } from "./components/MkSkeleton";
+export type { MkSkeletonProps } from "./components/MkSkeleton";
+
 export { MkStatusIndicator } from "./components/MkStatusIndicator";
 export type { MkStatusIndicatorProps } from "./components/MkStatusIndicator";
 
