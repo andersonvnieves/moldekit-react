@@ -31,7 +31,7 @@ function MkNavItem({
 
   return (
     <Component
-      className={`${baseStyle} ${isActive ? activeBaseStyle : ""}`}
+      className={`${baseStyle} ${isActive ? activeBaseStyle : ""} ${collapsed ? "" : "w-full"}`}
       {...linkProps}
       {...props}
     >
