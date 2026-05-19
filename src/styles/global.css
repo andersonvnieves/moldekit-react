@@ -257,3 +257,33 @@ body {
     transform: translateX(150%);
   }
 }
+
+@keyframes spinner-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.mk-spinner-rotate {
+  animation: spinner-rotate 0.7s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes spinner-dash {
+  0% {
+    strokedasharray: 1 200;
+    strokedashoffset: 0;
+  }
+  50% {
+    strokedasharray: 90 200;
+    strokedashoffset: -35;
+  }
+  100% {
+    strokedasharray: 90 200;
+    strokedashoffset: -125;
+  }
+}
