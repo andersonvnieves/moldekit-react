@@ -1,5 +1,7 @@
 export interface MkTopBarProps {
-  rightMenu?: React.ReactNode;
+  left?: React.ReactNode;
+  right?: React.ReactNode;
+  hasBorder?: boolean;
   className?: string;
   children?: React.ReactNode;
 }
