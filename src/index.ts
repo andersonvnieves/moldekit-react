@@ -45,6 +45,9 @@ export type { MkDonutChartProps } from "./components/MkDonutChart";
 export { MkDrawer } from "./components/MkDrawer";
 export type { MkDrawerProps } from "./components/MkDrawer";
 
+export { MkDropdown } from "./components/MkDropdown";
+export type { MkDropdownProps } from "./components/MkDropdown";
+
 export { MkHeader } from "./components/MkHeader";
 export type { MkHeaderProps } from "./components/MkHeader";
 
