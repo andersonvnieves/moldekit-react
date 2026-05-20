@@ -1,68 +1,45 @@
 import type { MkDropdownProps } from "./MkDropdown.props.ts";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function MkDropdown({
-  open = false,
-  onClose,
+  trigger,
   children,
+  align = "left-top",
   className = "",
 }: MkDropdownProps) {
-  const [isMounted, setIsMounted] = useState(open);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    if (open) {
-      setIsMounted(true);
-
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          setIsVisible(true);
-        });
-      });
-    } else {
-      setIsVisible(false);
-
-      const timeout = setTimeout(() => {
-        setIsMounted(false);
-      }, 200);
-
-      return () => clearTimeout(timeout);
-    }
-  }, [open]);
-
-  if (!isMounted) {
-    return null;
-  }
-
-  const handleBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (e.target === e.currentTarget) {
-      onClose?.();
-    }
-  };
-
+  const [open, setOpen] = useState(false);
   const contentStyles = [
-    //"relative top-14 left-2 right-2 origin-top",
-    "relative inline-block",
-    "rounded-[12px]",
+    "absolute mt-2 w-max min-w-40",
     "border border-[var(--border-default)] bg-[var(--surface-level1)]",
     "shadow-2xl",
     "transition-all duration-200",
+    "p-2 z-50",
   ].join(" ");
 
+  const alignStyle = {
+    "left-top": "left-0 top-full",
+    "right-top": "right-0 top-full",
+    "left-bottom": "left-0 bottom-full",
+    "right-bottom": "right-0 bottom-full",
+  };
+
   return (
-    <div className={"fixed inset-0 z-40"} onClick={handleBackdropClick}>
-      <div
-        className={`${contentStyles}
+    <div className="relative inline-block">
+      <div onClick={() => setOpen((prev) => !prev)}>{trigger}</div>
+      {open && (
+        <div
+          className={`${contentStyles} ${alignStyle[align]}
           ${
-            isVisible
+            open
               ? "translate-y-0 opacity-100 scale-100"
               : "-translate-y-2 opacity-0 scale-95"
           }
           ${className}
         `}
-      >
-        {children}
-      </div>
+        >
+          {children}
+        </div>
+      )}
     </div>
   );
 }

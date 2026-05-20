@@ -1,7 +1,4 @@
-import { useState } from "react";
-
 import type { Meta, StoryObj } from "@storybook/react-vite";
-
 import MkDropdown from "./MkDropdown.tsx";
 import { MkTopBar } from "../MkTopBar";
 import { MkButton } from "../MkButton";
@@ -21,42 +18,42 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   render: (args) => {
-    const [open, setOpen] = useState(false);
-
     return (
       <div className="min-h-screen bg-white">
         <MkTopBar
           left={<h1 className="mk-section-title">TopBar</h1>}
           right={
-            <MkButton
-              onClick={() => setOpen(true)}
-              variant={"transparent"}
-              iconName={"menu"}
-              iconOnly={true}
-            />
+            <MkDropdown
+              {...args}
+              trigger={
+                <MkButton
+                  variant={"transparent"}
+                  iconName={"menu"}
+                  iconOnly={true}
+                />
+              }
+            >
+              <nav className="flex flex-col p-2 w-[200px]">
+                <button className="rounded-xl px-4 py-3 text-left transition-colors hover:bg-neutral-100">
+                  Dashboard
+                </button>
+
+                <button className="rounded-xl px-4 py-3 text-left transition-colors hover:bg-neutral-100">
+                  Transactions
+                </button>
+
+                <button className="rounded-xl px-4 py-3 text-left transition-colors hover:bg-neutral-100">
+                  Investments
+                </button>
+
+                <button className="rounded-xl px-4 py-3 text-left transition-colors hover:bg-neutral-100">
+                  Settings
+                </button>
+              </nav>
+            </MkDropdown>
           }
           hasBorder={true}
         ></MkTopBar>
-
-        <MkDropdown {...args} open={open} onClose={() => setOpen(false)}>
-          <nav className="flex flex-col p-2 w-[200px]">
-            <button className="rounded-xl px-4 py-3 text-left transition-colors hover:bg-neutral-100">
-              Dashboard
-            </button>
-
-            <button className="rounded-xl px-4 py-3 text-left transition-colors hover:bg-neutral-100">
-              Transactions
-            </button>
-
-            <button className="rounded-xl px-4 py-3 text-left transition-colors hover:bg-neutral-100">
-              Investments
-            </button>
-
-            <button className="rounded-xl px-4 py-3 text-left transition-colors hover:bg-neutral-100">
-              Settings
-            </button>
-          </nav>
-        </MkDropdown>
       </div>
     );
   },

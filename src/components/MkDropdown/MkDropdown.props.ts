@@ -1,6 +1,6 @@
 export interface MkDropdownProps {
-  open?: boolean;
-  onClose?: () => void;
   className?: string;
-  children?: React.ReactNode;
+  trigger: React.ReactNode;
+  children: React.ReactNode;
+  align?: "left-top" | "left-bottom" | "right-top" | "right-bottom";
 }
