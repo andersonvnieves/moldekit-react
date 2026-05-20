@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { MkTopBar } from "./index.ts";
 import { MkUserAvatar } from "../MkUserAvatar";
+import { Menu } from "lucide-react";
 
 const meta = {
   title: "Navigation/TopBar",
@@ -17,11 +18,17 @@ type Story = StoryObj<typeof meta>;
 
 export const Main: Story = {
   args: {
-    rightMenu: <MkUserAvatar initials={"AV"} />,
+    left: (
+      <button
+        className="w-[45px] h-[45px] flex items-center justify-center transition-colors duration-200 hover:bg-neutral-100 rounded-full"
+        aria-label="Menu"
+      >
+        <Menu size={30} color={"var(--color-neutral-700)"} />
+      </button>
+    ),
+    right: <MkUserAvatar initials={"AV"} />,
     children: <p>Brand</p>,
-    onMenuClick: () => {
-      alert("Menu button clicked!");
-    },
+    hasBorder: true,
   },
 };
 

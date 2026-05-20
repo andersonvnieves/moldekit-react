@@ -1,20 +1,38 @@
 import type { MkTopBarProps } from "./MkTopBar.props.ts";
-import { Menu } from "lucide-react";
 
-function MkTopBar({ rightMenu, className, children }: MkTopBarProps) {
-  const baseStyle = "w-full flex justify-between items-center p-3";
+function MkTopBar({
+  left,
+  right,
+  hasBorder = false,
+  children,
+  className = "",
+}: MkTopBarProps) {
+  const baseStyles = [
+    "w-full h-14 px-4",
+    "flex items-center",
+    "bg-[var(--surface-level1)]",
+  ].join(" ");
+
   return (
-    <section className={`${baseStyle} ${className}`}>
-      <button
-        className="w-[45px] h-[45px] flex items-center justify-center transition-colors duration-200 hover:bg-neutral-100 rounded-full"
-        aria-label="Menu"
-      >
-        <Menu size={30} color={"var(--color-neutral-700)"} />
-      </button>
+    <header
+      className={`
+        ${baseStyles}   
+        ${hasBorder && "border-b border-[var(--border-default)]"}     
+        ${className}
+      `}
+    >
+      <div className="flex min-w-0 flex-1 items-center justify-start">
+        {left}
+      </div>
 
-      {children ? children : null}
-      {rightMenu ? rightMenu : null}
-    </section>
+      <div className="flex shrink-0 items-center justify-center px-4">
+        {children}
+      </div>
+
+      <div className="flex min-w-0 flex-1 items-center justify-end">
+        {right}
+      </div>
+    </header>
   );
 }
 

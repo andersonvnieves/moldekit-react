@@ -16,7 +16,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Title: Story = {
   render: (args) => (
-    <div className="p-6">
+    <div className="p-6 w-[200px]">
       <MkNavList data={args.data} collapsed={args.collapsed} />
     </div>
   ),
