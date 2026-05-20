@@ -24,29 +24,43 @@ export const Default: Story = {
           left={<h1 className="mk-section-title">TopBar</h1>}
           right={
             <MkDropdown
+              className={"mt-[18px]"}
               {...args}
               trigger={
                 <MkButton
                   variant={"transparent"}
                   iconName={"menu"}
                   iconOnly={true}
+                  size={"lg"}
                 />
               }
             >
-              <nav className="flex flex-col p-2 w-[200px]">
-                <button className="rounded-xl px-4 py-3 text-left transition-colors hover:bg-neutral-100">
+              <nav className="flex flex-col p-2">
+                <button
+                  onClick={() => alert("Dashboard")}
+                  className="rounded-xl px-4 py-3 text-left transition-colors hover:bg-neutral-100"
+                >
                   Dashboard
                 </button>
 
-                <button className="rounded-xl px-4 py-3 text-left transition-colors hover:bg-neutral-100">
+                <button
+                  onClick={() => alert("Transactions")}
+                  className="rounded-xl px-4 py-3 text-left transition-colors hover:bg-neutral-100"
+                >
                   Transactions
                 </button>
 
-                <button className="rounded-xl px-4 py-3 text-left transition-colors hover:bg-neutral-100">
+                <button
+                  onClick={() => alert("Investments")}
+                  className="rounded-xl px-4 py-3 text-left transition-colors hover:bg-neutral-100"
+                >
                   Investments
                 </button>
 
-                <button className="rounded-xl px-4 py-3 text-left transition-colors hover:bg-neutral-100">
+                <button
+                  onClick={() => alert("Settings")}
+                  className="rounded-xl px-4 py-3 text-left transition-colors hover:bg-neutral-100"
+                >
                   Settings
                 </button>
               </nav>
