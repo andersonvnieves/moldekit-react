@@ -1,9 +1,6 @@
-export interface MkTimeInputProps extends Omit<
-  React.InputHTMLAttributes<HTMLInputElement>,
-  "value" | "size"
-> {
-  value?: string;
-  placeholder?: string;
-  size?: "sm" | "md" | "lg";
+import type { InputHTMLAttributes } from "react";
+
+export interface MkTimeInputProps extends InputHTMLAttributes<HTMLInputElement> {
+  variantSize?: "sm" | "md" | "lg";
   className?: string;
 }

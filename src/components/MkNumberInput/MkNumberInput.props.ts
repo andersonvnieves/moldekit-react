@@ -1,6 +1,6 @@
-export interface MkNumberInputProps {
-  value?: number;
-  placeholder?: string;
-  size?: "sm" | "md" | "lg";
+import type { InputHTMLAttributes } from "react";
+
+export interface MkNumberInputProps extends InputHTMLAttributes<HTMLInputElement> {
+  variantSize?: "sm" | "md" | "lg";
   className?: string;
 }

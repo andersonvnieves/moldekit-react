@@ -20,14 +20,14 @@ export const Title: Story = {
       <MkTextInput
         className={args.className}
         placeholder={args.placeholder}
-        size={args.size}
+        variantSize={args.variantSize}
         disabled={args.disabled}
       />
     </div>
   ),
   args: {
     placeholder: "Text placeholder",
-    size: "md",
+    variantSize: "md",
     disabled: false,
   },
 };
@@ -38,14 +38,14 @@ export const Disabled: Story = {
       <MkTextInput
         className={args.className}
         placeholder={args.placeholder}
-        size={args.size}
+        variantSize={args.variantSize}
         disabled={args.disabled}
       />
     </div>
   ),
   args: {
     placeholder: "Text placeholder",
-    size: "md",
+    variantSize: "md",
     disabled: true,
   },
 };
@@ -53,12 +53,17 @@ export const Disabled: Story = {
 export const Test: Story = {
   render: (args) => (
     <div className="p-6 w-full">
-      <MkTextInput className={args.className} placeholder={args.placeholder} />
+      <MkTextInput
+        className={args.className}
+        placeholder={args.placeholder}
+        variantSize={args.variantSize}
+        disabled={args.disabled}
+      />
     </div>
   ),
   args: {
     value: "",
     placeholder: "Text placeholder",
-    size: "md",
+    variantSize: "md",
   },
 };

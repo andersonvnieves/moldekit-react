@@ -20,7 +20,7 @@ export const Title: Story = {
       <MkTimeInput
         className={args.className}
         placeholder={args.placeholder}
-        size={args.size}
+        variantSize={args.variantSize}
         disabled={args.disabled}
       />
     </div>
@@ -34,7 +34,7 @@ export const Test: Story = {
       <MkTimeInput
         className={args.className}
         placeholder={args.placeholder}
-        size={args.size}
+        variantSize={args.variantSize}
         disabled={args.disabled}
       />
     </div>

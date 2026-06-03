@@ -1,6 +1,6 @@
-export interface MkTextInputProps {
-  value?: string | number;
-  placeholder?: string;
-  size?: "sm" | "md" | "lg";
+import type { InputHTMLAttributes } from "react";
+
+export interface MkTextInputProps extends InputHTMLAttributes<HTMLInputElement> {
+  variantSize?: "sm" | "md" | "lg";
   className?: string;
 }
