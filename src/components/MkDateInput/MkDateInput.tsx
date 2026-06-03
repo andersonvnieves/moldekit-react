@@ -4,7 +4,7 @@ import { Calendar } from "lucide-react";
 function MkDateInput({
   value,
   placeholder = "00:00",
-  size = "md",
+  variantSize = "md",
   className,
   ...props
 }: MkDateInputProps) {
@@ -38,13 +38,13 @@ function MkDateInput({
   return (
     <div className="relative">
       <Calendar
-        className={`absolute top-1/2 -translate-y-1/2 ${iconPositions[size]} text-neutral-500`}
-        size={iconSizes[size]}
+        className={`absolute top-1/2 -translate-y-1/2 ${iconPositions[variantSize]} text-neutral-500`}
+        size={iconSizes[variantSize]}
         aria-hidden="true"
       />
       <input
         type="date"
-        className={`${baseStyle} ${sizeStyles[size]} ${className || ""}`}
+        className={`${baseStyle} ${sizeStyles[variantSize]} ${className || ""}`}
         placeholder={placeholder}
         value={value}
         {...props}

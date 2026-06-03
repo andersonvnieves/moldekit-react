@@ -20,14 +20,14 @@ export const Title: Story = {
       <MkNumberInput
         className={args.className}
         placeholder={args.placeholder}
-        size={args.size}
+        variantSize={args.variantSize}
         disabled={args.disabled}
       />
     </div>
   ),
   args: {
     placeholder: "Text placeholder",
-    size: "md",
+    variantSize: "md",
     disabled: false,
   },
 };
@@ -38,14 +38,14 @@ export const Disabled: Story = {
       <MkNumberInput
         className={args.className}
         placeholder={args.placeholder}
-        size={args.size}
+        variantSize={args.variantSize}
         disabled={args.disabled}
       />
     </div>
   ),
   args: {
     placeholder: "Text placeholder",
-    size: "md",
+    variantSize: "md",
     disabled: true,
   },
 };
@@ -56,12 +56,13 @@ export const Test: Story = {
       <MkNumberInput
         className={args.className}
         placeholder={args.placeholder}
+        variantSize={args.variantSize}
       />
     </div>
   ),
   args: {
     value: "",
     placeholder: "Text placeholder",
-    size: "md",
+    variantSize: "md",
   },
 };

@@ -3,7 +3,7 @@ import type { MkNumberInputProps } from "./MkNumberInput.props.ts";
 function MkNumberInput({
   value,
   placeholder,
-  size = "md",
+  variantSize = "md",
   className,
   ...props
 }: MkNumberInputProps) {
@@ -25,7 +25,7 @@ function MkNumberInput({
   return (
     <input
       type={"number"}
-      className={`${baseStyle} ${sizeStyles[size]} ${className}`}
+      className={`${baseStyle} ${sizeStyles[variantSize]} ${className}`}
       placeholder={placeholder}
       value={value}
       {...props}

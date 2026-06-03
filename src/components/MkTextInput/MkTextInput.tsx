@@ -3,7 +3,7 @@ import type { MkTextInputProps } from "./MkTextInput.props.ts";
 function MkTextInput({
   value,
   placeholder,
-  size = "md",
+  variantSize = "md",
   className,
   ...props
 }: MkTextInputProps) {
@@ -24,7 +24,7 @@ function MkTextInput({
 
   return (
     <input
-      className={`${baseStyle} ${sizeStyles[size]} ${className}`}
+      className={`${baseStyle} ${sizeStyles[variantSize]} ${className}`}
       placeholder={placeholder}
       value={value}
       {...props}
