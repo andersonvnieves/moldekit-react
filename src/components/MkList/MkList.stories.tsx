@@ -31,7 +31,7 @@ export const Main: Story = {
     data: [
       {
         id: "1",
-        title: "Item 1",
+        title: "Item 1 with long long long title :)",
         numericValue: "R$ 123,00",
         status: { color: "success", text: "Ok" },
       },

@@ -18,8 +18,12 @@ function MkListItem({ data, onClick }: MkListItemProps) {
         className={buttonStyles}
       >
         <div className={baseStyles}>
-          <div className={"flex flex-col justify-center"}>
-            <p className={"mk-content"}>{data.title}</p>
+          <div
+            className={
+              "flex flex-col justify-center min-w-0 flex-1 w-full text-left mr-2"
+            }
+          >
+            <p className={"mk-content truncate w-full"}>{data.title}</p>
             {data.status ? (
               <MkStatusIndicator
                 color={data.status.color}
@@ -27,7 +31,7 @@ function MkListItem({ data, onClick }: MkListItemProps) {
               />
             ) : null}
           </div>
-          <div className={"flex items-center"}>
+          <div className={"flex items-center shrink-0"}>
             {data.status && data.numericValue ? (
               <MkDivider orientation={"vertical"} className={"mx-2"} />
             ) : null}
@@ -41,8 +45,12 @@ function MkListItem({ data, onClick }: MkListItemProps) {
   } else {
     return (
       <div className={baseStyles}>
-        <div className={"flex flex-col justify-center"}>
-          <p className={"mk-content"}>{data.title}</p>
+        <div
+          className={
+            "flex flex-col justify-center min-w-0 flex-1 w-full text-left mr-2"
+          }
+        >
+          <p className={"mk-content truncate w-full"}>{data.title}</p>
           {data.status ? (
             <MkStatusIndicator
               color={data.status.color}
@@ -50,7 +58,7 @@ function MkListItem({ data, onClick }: MkListItemProps) {
             />
           ) : null}
         </div>
-        <div className={"flex items-center"}>
+        <div className={"flex items-center shrink-0"}>
           {data.status && data.numericValue ? (
             <MkDivider orientation={"vertical"} className={"mx-2"} />
           ) : null}

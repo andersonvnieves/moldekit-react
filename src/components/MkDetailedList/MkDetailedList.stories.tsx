@@ -28,7 +28,7 @@ export const Main: Story = {
     data: [
       {
         id: "1",
-        title: "Item 1",
+        title: "Item 1 item with long long name",
         description: "lorem ipsum",
         numericValue: "R$ 123,00",
         icon: {
