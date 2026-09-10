@@ -17,21 +17,29 @@ function MkDetailedListItem({ data, onClick }: MkDetailedListItemProps) {
           "flex justify-between items-center bg-var(--surface-level1) hover:bg-neutral-100 p-2 h-[70px] transition-all duration-300 border-1 border-[var(--border-default)] rounded-xl"
         }
       >
-        <div className={`flex items-center gap-2`}>
+        <div className={`flex items-center gap-2 min-w-0 flex-1 mr-2`}>
           {data.icon ? (
-            <MkIconBadge
-              color={data.icon.color}
-              iconName={data.icon.iconName}
-            />
+            <div className={"shrink-0"}>
+              <MkIconBadge
+                color={data.icon.color}
+                iconName={data.icon.iconName}
+              />
+            </div>
           ) : null}
-          <div className={"flex flex-col justify-center items-start text-left"}>
-            <p className={"mk-content"}>{data.title}</p>
+          <div
+            className={
+              "flex flex-col justify-center items-start text-left min-w-0 flex-1 w-full"
+            }
+          >
+            <p className={"mk-content truncate w-full"}>{data.title}</p>
             {data.description ? (
-              <p className={"mk-subcontent"}>{data.description}</p>
+              <p className={"mk-subcontent truncate w-full"}>
+                {data.description}
+              </p>
             ) : null}
           </div>
         </div>
-        <div className={"flex items-center"}>
+        <div className={"flex items-center shrink-0"}>
           {data.numericValue ? (
             <MkDivider orientation={"vertical"} className={"mx-2"} />
           ) : null}
